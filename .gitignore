@@ -1,0 +1,11 @@
+echo "# System files" > .gitignore
+echo ".bash_history" >> .gitignore
+echo ".gitconfig" >> .gitignore
+echo ".lesshst" >> .gitignore
+echo ".config/" >> .gitignore
+echo "docker/" >> .gitignore
+echo "" >> .gitignore
+echo "# Project specific" >> .gitignore
+echo "node_modules/" >> .gitignore
+echo ".env" >> .gitignore
+echo "*.log" >> .gitignore
