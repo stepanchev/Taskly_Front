@@ -207,7 +207,7 @@ git branch -d <name>                # Удалить ветку
 
 <div align="center">
 
-## 🚀 **Приятной разработки!**
+
 
 [![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)](https://git-scm.com/)
 [![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/)
