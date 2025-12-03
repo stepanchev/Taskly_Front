@@ -1,22 +1,26 @@
-const express = require("express");
+import express from "express";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const router = express.Router();
-const path = require("path");
 
 // Главная страница
 router.get("/", (req, res) => {
-  console.log("Рендерим главную страницу");
   res.render("index", {
-    title: "Главная страница",
-    message: "Добро пожаловать в Taskly!",
+    title: "Главная",
+    message: "Привет, Taskly!",
   });
 });
 
-// Пример другой страницы
+// О нас
 router.get("/about", (req, res) => {
   res.render("about", {
     title: "О нас",
-    message: "Taskly - ваш менеджер задач",
+    message: "Это Taskly - менеджер задач",
   });
 });
 
-module.exports = router;
+export default router;

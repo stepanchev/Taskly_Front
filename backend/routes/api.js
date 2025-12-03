@@ -1,22 +1,21 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
 
-// Пример API endpoint
+// Health check
 router.get("/health", (req, res) => {
   res.json({
     status: "OK",
     timestamp: new Date().toISOString(),
-    environment: process.env.NODE_ENV,
   });
 });
 
-// Пример POST endpoint
-router.post("/data", (req, res) => {
-  const data = req.body;
-  res.json({
-    message: "Данные получены",
-    received: data,
-  });
+// Пример API
+router.get("/tasks", (req, res) => {
+  res.json([
+    { id: 1, title: "Изучить Express", done: true },
+    { id: 2, title: "Настроить Tailwind", done: false },
+    { id: 3, title: "Создать API", done: false },
+  ]);
 });
 
-module.exports = router;
+export default router;

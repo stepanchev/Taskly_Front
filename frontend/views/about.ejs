@@ -3,52 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title %> | Taskly</title>
+    <title><%= title %></title>
     <link rel="stylesheet" href="/css/output.css" />
-    <style>
-      body {
-        font-family: system-ui, -apple-system, sans-serif;
-        background: #f8fafc;
-        min-height: 100vh;
-        padding: 20px;
-      }
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
-      }
-    </style>
   </head>
-  <body>
-    <div class="container">
-      <nav class="mb-8">
-        <a href="/" class="text-blue-600 hover:text-blue-800">← Назад</a>
-      </nav>
+  <body class="bg-gray-50 min-h-screen p-8">
+    <div class="max-w-2xl mx-auto">
+      <a href="/" class="inline-block mb-6 text-blue-600 hover:text-blue-800"
+        >← На главную</a
+      >
 
-      <div class="bg-white rounded-2xl shadow-xl p-8">
-        <h1 class="text-3xl font-bold mb-6"><%= title %></h1>
+      <div class="bg-white rounded-xl shadow-lg p-8">
+        <h1 class="text-3xl font-bold mb-4"><%= title %></h1>
+        <p class="text-lg text-gray-700 mb-6"><%= message %></p>
+
         <div class="prose max-w-none">
-          <p class="text-lg mb-4"><%= message %></p>
-          <p class="mb-4">
-            Это простой проект на Express.js с использованием Tailwind CSS для
-            быстрой разработки интерфейсов.
-          </p>
-
-          <h2 class="text-2xl font-bold mt-8 mb-4">Используемые технологии:</h2>
+          <h2 class="text-xl font-semibold mb-3">Технологии:</h2>
           <ul class="list-disc pl-5 mb-6">
-            <li>Express.js - backend фреймворк</li>
-            <li>Tailwind CSS - утилитарный CSS фреймворк</li>
-            <li>EJS - шаблонизатор</li>
-            <li>Node.js - среда выполнения</li>
+            <li>Node.js + Express.js</li>
+            <li>Tailwind CSS для стилей</li>
+            <li>EJS для шаблонов</li>
           </ul>
 
-          <div class="mt-8 p-4 bg-blue-50 rounded-lg">
-            <h3 class="font-bold mb-2">🚀 Команды для запуска:</h3>
-            <code class="bg-gray-800 text-white p-2 rounded block">
-              npm install<br />
-              npm run tailwind:build<br />
-              npm run dev
-            </code>
-          </div>
+          <h2 class="text-xl font-semibold mb-3">Запуск:</h2>
+          <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto">
+npm install
+npm run tailwind:build
+npm run dev</pre
+          >
         </div>
       </div>
     </div>

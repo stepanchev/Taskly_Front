@@ -1,8 +1,13 @@
-require("dotenv").config();
-const express = require("express");
-const path = require("path");
-const morgan = require("morgan");
-const cors = require("cors");
+import "dotenv/config";
+import express from "express";
+import path from "path";
+import morgan from "morgan";
+import cors from "cors";
+
+// Для работы с __dirname в ES модулях
+import { fileURLToPath } from "url";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -13,53 +18,33 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Настройка EJS с правильными путями
+// Настройка EJS
 app.set("view engine", "ejs");
-app.set("views", [
-  path.join(__dirname, "../frontend/views"),
-  path.join(__dirname, "../frontend/views/partials"),
-]);
+app.set("views", path.join(__dirname, "../frontend/views"));
 
 // Статические файлы
-app.use("/css", express.static(path.join(__dirname, "../frontend/public/css")));
-app.use("/js", express.static(path.join(__dirname, "../frontend/public/js")));
-app.use("/assets", express.static(path.join(__dirname, "../frontend/assets")));
-
-// Или просто все из public
 app.use(express.static(path.join(__dirname, "../frontend/public")));
 
-// Маршруты
-app.use("/", require("./routes/index"));
-app.use("/api", require("./routes/api"));
+// Импорт маршрутов
+import indexRoutes from "./routes/index.js";
+import apiRoutes from "./routes/api.js";
 
-// Главная страница (добавим напрямую для теста)
-app.get("/test", (req, res) => {
-  res.render("test", {
-    title: "Тестовая страница",
-    message: "Всё работает!",
-  });
-});
+// Маршруты
+app.use("/", indexRoutes);
+app.use("/api", apiRoutes);
 
 // Обработка 404
 app.use((req, res) => {
-  res.status(404).render("error", {
-    title: "404 Not Found",
-    message: "Страница не найдена",
-  });
+  res.status(404).send("404 - Страница не найдена");
 });
 
 // Обработка ошибок
 app.use((err, req, res, next) => {
-  console.error("Ошибка:", err.message);
-  res.status(500).render("error", {
-    title: "500 Server Error",
-    message: "Что-то пошло не так: " + err.message,
-  });
+  console.error(err.stack);
+  res.status(500).send("500 - Ошибка сервера");
 });
 
 // Запуск сервера
 app.listen(PORT, () => {
-  console.log(`🚀 Сервер запущен на http://localhost:${PORT}`);
-  console.log(`📁 Режим: ${process.env.NODE_ENV}`);
-  console.log(`📁 Views path: ${path.join(__dirname, "../frontend/views")}`);
+  console.log(`🚀 Сервер запущен: http://localhost:${PORT}`);
 });
