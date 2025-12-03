@@ -1,11 +1,68 @@
-echo "# System files" > .gitignore
-echo ".bash_history" >> .gitignore
-echo ".gitconfig" >> .gitignore
-echo ".lesshst" >> .gitignore
-echo ".config/" >> .gitignore
-echo "docker/" >> .gitignore
-echo "" >> .gitignore
-echo "# Project specific" >> .gitignore
-echo "node_modules/" >> .gitignore
-echo ".env" >> .gitignore
-echo "*.log" >> .gitignore
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build outputs
+dist/
+build/
+.out/
+.next/
+
+# Tailwind build
+frontend/public/css/output.css
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+.nyc_output/
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# System files
+*.sys
+*.dll
+
+# Temporary files
+*.tmp
+*.temp

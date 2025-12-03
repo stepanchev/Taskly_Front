@@ -1,0 +1,32 @@
+{
+  "name": "my-express-app",
+  "version": "1.0.0",
+  "description": "Express + Tailwind project",
+  "main": "backend/app.js",
+  "scripts": {
+    "start": "node backend/app.js",
+    "work": "nodemon backend/app.js",
+    "tailwind:build": "npx tailwindcss -i ./frontend/assets/css/styles.css -o ./frontend/public/css/output.css --minify",
+    "tailwind:watch": "npx tailwindcss -i ./frontend/assets/css/styles.css -o ./frontend/public/css/output.css --watch",
+    "build": "npm run tailwind:build && npm run start",
+    "dev": "concurrently \"npm run tailwind:watch\" \"npm run work\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "concurrently": "^9.2.1",
+    "html-validator": "^6.0.1",
+    "nodemon": "^3.0.1",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5"
+  }
+}

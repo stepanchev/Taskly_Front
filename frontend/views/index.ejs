@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %> | Taskly</title>
+    <link rel="stylesheet" href="/css/output.css" />
+    <style>
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .card {
+        background: white;
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1 class="text-4xl font-bold mb-6 text-gray-800"><%= title %></h1>
+        <p class="text-xl text-gray-600 mb-8"><%= message %></p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div class="p-6 bg-blue-50 rounded-lg">
+            <h3 class="text-xl font-semibold mb-2">🚀 Быстро</h3>
+            <p class="text-gray-600">Express.js + Tailwind CSS</p>
+          </div>
+          <div class="p-6 bg-green-50 rounded-lg">
+            <h3 class="text-xl font-semibold mb-2">📁 Чистая структура</h3>
+            <p class="text-gray-600">Правильная архитектура проекта</p>
+          </div>
+          <div class="p-6 bg-purple-50 rounded-lg">
+            <h3 class="text-xl font-semibold mb-2">✅ Готово к работе</h3>
+            <p class="text-gray-600">Просто запустите npm run dev</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <a
+            href="/about"
+            class="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition"
+          >
+            О проекте
+          </a>
+          <a
+            href="/api/health"
+            class="px-6 py-3 bg-gray-200 text-gray-800 rounded-lg font-medium hover:bg-gray-300 transition"
+          >
+            Проверить API
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-8 text-center text-white">
+        <p>Taskly &copy; 2024 | Express + Tailwind</p>
+        <p class="mt-2 text-sm opacity-80">
+          Сервер запущен на порту:
+          <span id="port"><%= process.env.PORT || 3000 %></span>
+        </p>
+      </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+    <script>
+      console.log("Taskly запущен!");
+      document.getElementById("port").textContent =
+        window.location.port || 3000;
+    </script>
+  </body>
+</html>
