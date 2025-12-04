@@ -34,7 +34,7 @@ body{
   background-position: center center; 
   min-height: 750px;
   height: auto;
-  
+  background-size: 100%;
 }
 .wheels-adaptiv{
     display: none;
