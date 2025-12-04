@@ -59,10 +59,10 @@ border-radius:9px;
   cursor: pointer;
    transform: translate(-2px);
 }
-@media (width <=1650px) {
+@media (width <=1590px) {
 .bunner-button{
   left: 24%;
-top: 79%;  
+ top: 78%;
 }
 }
 @media (width <=1350px) {
