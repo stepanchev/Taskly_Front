@@ -27,10 +27,14 @@ body{
   
 }
 
-.banner{
+.banner {
   background-image: url(../images/banner-image.png);
   background-repeat: no-repeat;
-  height: 900px;
+
+  background-position: center center; 
+  min-height: 750px;
+  height: auto;
+  
 }
 .wheels-adaptiv{
     display: none;
@@ -38,7 +42,7 @@ body{
 .bunner-button{
 position: absolute;
 left: 23%;
-top: 57%;
+top: 60%;
 border: solid 1px #f3f3f3;
 background-color: white;
 color: black;
@@ -48,7 +52,25 @@ font-size: 3vh;
 font-weight: bolder;
 border-radius:9px;
 }
-@media (width <=900px) {
+.bunner-button:hover{
+   background-color: rgb(255, 255, 255); 
+   border: solid 1px #ffffff;
+   box-shadow: 0px 2px 9px 1px rgb(255, 255, 255);
+  cursor: pointer;
+   transform: translate(-2px);
+}
+
+@media (width <=1350px) {
+.banner-text p {
+    font-size: 1.9vw;
+}
+}
+@media (width <=1100px) {
+.banner-text p {
+    font-size: 2.1vw;
+}
+}
+@media (width <=1000px) {
 .bunner-button{
   left: 60%;
 top: 62%;  
@@ -61,12 +83,14 @@ top: 62%;
 .bunner-button{
     position: relative;
     left: 10px;
-    width: 30%;
+    width: 40%;
 }
 .banner{
   background-color: black;
   background-repeat: no-repeat;
     height: 700px;
+    background-image: none;
+
 }
 .banner-text h2{
     font-size: 40px;
@@ -80,6 +104,84 @@ top: 62%;
 width: 500px;
 position: absolute;
 right: 0;
-top: 57%;
+top: 60%;
+}
+}
+@media (width <=700px) {
+.wheels-adaptiv{
+    display: block;
+width: 400px;
+position: absolute;
+right: 0;
+top: 67%;
+}
+.bunner-button{
+    position: relative;
+    left: 10px;
+    width: 35%;
+}
+}
+@media (width <=600px) {
+.bunner-button{
+    position: relative;
+    left: 10px;
+    width: 37%;
+}
+.wheels-adaptiv{
+    display: block;
+width: 370px;
+position: absolute;
+right: 0;
+top: 69%;
+}
+}
+@media (width <=630px) {
+.bunner-button{
+    position: relative;
+    left: 10px;
+    width: 49%;
+    font-size: 2.3vh;
+}
+.wheels-adaptiv{
+    display: block;
+width: 390px;
+position: absolute;
+right: 0;
+top: 67%;
+}
+.banner-text p{
+    font-size: 3.9vw;
+}
+}
+@media (width <=465px) {
+.bunner-button{
+    position: relative;
+    left: 10px;
+    width: 68%;
+    font-size: 2.3vh;
+}
+.wheels-adaptiv{
+    display: block;
+width: 370px;
+position: absolute;
+right: 0;
+top: 68%;
+
+}
+.banner-text h2{ 
+    font-size: 30px;
+}
+.banner-text p{ 
+font-size: 5.5vw;
+width: 80%;
+}
+.banner-text span{
+    font-size: 30px;
+ }
+br{
+    display: none;
+}
+.banner-content {
+    padding: 29px;
 }
 }
