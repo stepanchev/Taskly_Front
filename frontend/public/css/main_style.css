@@ -81,9 +81,25 @@ top: 64%;
 .banner-text p {
     font-size: 1.9vw;
 }
+.banner-text h2 {
+line-height: 30px;
+
+}
+.h2-active{
+  padding-top: 50px;
+}
 .bunner-button{
   left: 25%;
-top: 62%;  
+top: 55%;  
+}
+.banner {
+  background-image: url(../images/banner-image.png);
+  background-repeat: no-repeat;
+
+  background-position: center center; 
+  min-height: 750px;
+  height: auto;
+  background-size: 120%;
 }
 }
 @media (width <=1100px) {
@@ -92,7 +108,7 @@ top: 62%;
 }
 .bunner-button{
   left: 28%;
-top: 63%;  
+top: 54%;  
 }
 }
 @media (width <=1000px) {
