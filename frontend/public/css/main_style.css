@@ -102,7 +102,7 @@ body {
 }
 .service-card:hover {
   transform: scale(1.05);
-  box-shadow: 0px 18px 40px rgba(0, 0, 0, 1);
+  box-shadow: 0px 18px 40px rgba(0, 0, 0, 0.548);
 }
 .card-header {
   background: #000;
@@ -149,38 +149,26 @@ body {
   top: 1600px;
   right: 0%;
 }
-.acceptance-of-applications{
+/* Секция приема заявок */
+.acceptance-of-applications {
   background-image: url(../images/background\ for\ accepting\ applications.png);
-   background-position: center center;
- background-size: 100%;
+  background-position: center center;
+  background-size: 100%;
   height: 1100px;
   background-repeat: no-repeat;
-  
 }
-.main-acceptance-of-applications{
+.main-acceptance-of-applications {
   color: white;
   padding: 70px;
-  
 }
-.Acceptance-of-applications{
-  margin-top: 200px;
+.Acceptance-of-applications {
+  margin-top: 160px;
 }
-.Tire-disc-selection h1{
-font-size: 45px;
-}
-.Tire-disc-selection p{
-font-size: 32px;
-}
-.Acceptance-of-applications h1{
+.Tire-disc-selection h1 {
   font-size: 45px;
 }
-.number{
-font-size: 32px;
-border: solid #FFFFFF 4px;
-width: 300px;
-text-align: center;
-padding: 15px;
-border-radius: 15px;
+.Tire-disc-selection p {
+  font-size: 32px;
 }
 .Waiting-period{
 font-size: 24;
@@ -286,15 +274,198 @@ bottom: 40px;
 font-size: 1.2rem;
 color: #a0a0c0;
 font-weight: 500;
+.Acceptance-of-applications h1 {
+  font-size: 45px;
+}
+
+.number {
+  font-size: 32px;
+  border: solid #ffffff 4px;
+  width: auto;
+  text-align: center;
+  padding: 15px;
+  border-radius: 15px;
+  background: none;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 100px;
+}
+.Waiting-period {
+  font-size: 24px;
+}
+/* Cекция с преимуществами  */
+.section-Advantages {
+  height: 500px;
+}
+
+.conteiner_hexagon {
+  width: 80%;
+  margin: 0 auto;
+  height: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
+}
+/* Секция скидка клуба */
+.club-discounts-text h1 {
+  font-size: 2vw;
+  font-weight: bold;
+}
+.club-discounts-text p {
+  font-size: 1.5vw;
+  color: #505050;
+  line-height: 1.5;
+  font-weight: 200;
+}
+.club-discounts {
+  padding: 100px;
+}
+.img-club {
+  width: 25vw;
+  height: auto;
+  margin-left: 100px;
+  margin-top: 2vw;
+}
+/* Шестиугольник */
+.hexagon_text_column {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+.hexagon_text_column h3 {
+  width: 80%;
+  text-align: center;
+  font-size: large;
+}
+.hexagon {
+  width: 7vw;
+  height: 6.56vw;
+  background: black;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  position: relative;
+  transform: rotate(90deg);
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.hexagon::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  background: white;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  z-index: 1;
+}
+
+.hexagon svg {
+  position: relative !important;
+  z-index: 2 !important;
+  width: 3vw !important;
+  height: 3vw !important;
+  transform: rotate(-90deg) !important;
+  display: block !important;
+}
+
+.hexagon svg path {
+  fill: black !important;
+}
+
+.hexagon_text_column p {
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.hexagon_text_column {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  max-width: 280px;
+  margin: 0 auto;
+  min-height: 250px;
+}
+
+.hexagon_text_column p {
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.hexagon_text_column {
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.hexagon_text_column .hover-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.9);
+  transition: all 0.4s ease;
+  z-index: 10;
+  text-align: center;
+}
+
+.hexagon_text_column .hover-text p {
+  font-size: clamp(0.85rem, 1.7vw, 0.95rem);
+  color: #444;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.hexagon_text_column:hover {
+  transform: translateY(-10px);
+}
+
+.hexagon_text_column:hover .main-text {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.hexagon_text_column:hover .hover-text {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
 }
 @media (width <=1970px) {
   .bunner-button {
     left: 22%;
     top: 57%;
   }
-   .main-acceptance-of-applications{
+  .main-acceptance-of-applications {
     padding: 100px;
-    
   }
 }
 
@@ -310,30 +481,30 @@ font-weight: 500;
     left: 21%;
     top: 64%;
   }
-  .acceptance-of-applications{
+  .acceptance-of-applications {
     background-size: 130%;
   }
-  .main-acceptance-of-applications{
+  .main-acceptance-of-applications {
     padding: 60px;
   }
 }
 
 @media (width <=1292px) {
-.main-photo img{
- display: none; 
-}
-.services-row{
-display: flex;
-flex-direction: column;
-}
-.service-card{
-width: 85%;
-margin: 2px auto;
-}
+  .main-photo img {
+    display: none;
+  }
+  .services-row {
+    display: flex;
+    flex-direction: column;
+  }
+  .service-card {
+    width: 85%;
+    margin: 2px auto;
+  }
 }
 @media (width <=1350px) {
-  .main-photo img{
-  width: 45%;
+  .main-photo img {
+    width: 45%;
   }
   .banner-text p {
     font-size: 1.9vw;
@@ -366,10 +537,10 @@ margin: 2px auto;
     left: 28%;
     top: 54%;
   }
-    .acceptance-of-applications{
+  .acceptance-of-applications {
     background-size: 147%;
   }
-  .main-acceptance-of-applications{
+  .main-acceptance-of-applications {
     padding: 76px;
   }
 }
@@ -415,27 +586,26 @@ margin: 2px auto;
     top: 64%;
   }
 
-     .acceptance-of-applications{
+  .acceptance-of-applications {
     background-size: 196%;
     height: 100%;
   }
-  .main-acceptance-of-applications{
+  .main-acceptance-of-applications {
     padding: 35px;
   }
 }
 @media (width <=800px) {
-     .acceptance-of-applications{
+  .acceptance-of-applications {
     background-size: 250%;
   }
-  .main-acceptance-of-applications{
+  .main-acceptance-of-applications {
     padding: 25px;
   }
-  .Acceptance-of-applications{
-  margin-top: 40px;
-}
+  .Acceptance-of-applications {
+    margin-top: 40px;
+  }
 }
 @media (width <=700px) {
- 
   .wheels-adaptiv {
     width: 400px;
     top: 71%;
@@ -446,35 +616,34 @@ margin: 2px auto;
     left: 10px;
     width: 35%;
   }
-   .acceptance-of-applications{
+  .acceptance-of-applications {
     background-size: 360%;
     height: 100%;
   }
-  .main-acceptance-of-applications{
+  .main-acceptance-of-applications {
     padding: 30px;
-    
   }
-  .Acceptance-of-applications{
-  margin-top: 10px;
-}
-.Tire-disc-selection h1{
-font-size: 30px;
-}
-.Tire-disc-selection p{
-font-size: 25px;
-}
-.Acceptance-of-applications h1{
-font-size: 30px;
-}
-.number{
-  font-size: 15px;
-  width: 35%;
-}
+  .Acceptance-of-applications {
+    margin-top: 10px;
+  }
+  .Tire-disc-selection h1 {
+    font-size: 30px;
+  }
+  .Tire-disc-selection p {
+    font-size: 25px;
+  }
+  .Acceptance-of-applications h1 {
+    font-size: 30px;
+  }
+  .number {
+    font-size: 15px;
+    width: 35%;
+  }
 }
 
 @media (width <=630px) {
-  .service-list li{
-  line-height: 30px;
+  .service-list li {
+    line-height: 30px;
   }
   .bunner-button {
     position: relative;
@@ -491,30 +660,29 @@ font-size: 30px;
   .banner-text p {
     font-size: 3.9vw;
   }
-   .acceptance-of-applications{
+  .acceptance-of-applications {
     background-size: 360%;
     height: 100%;
   }
-  .main-acceptance-of-applications{
+  .main-acceptance-of-applications {
     padding: 30px;
-    
   }
-  .Acceptance-of-applications{
-  margin-top: 10px;
-}
-.Tire-disc-selection h1{
-font-size: 30px;
-}
-.Tire-disc-selection p{
-font-size: 25px;
-}
-.Acceptance-of-applications h1{
-font-size: 30px;
-}
-.number{
-  font-size: 15px;
-  width: 35%;
-}
+  .Acceptance-of-applications {
+    margin-top: 10px;
+  }
+  .Tire-disc-selection h1 {
+    font-size: 30px;
+  }
+  .Tire-disc-selection p {
+    font-size: 25px;
+  }
+  .Acceptance-of-applications h1 {
+    font-size: 30px;
+  }
+  .number {
+    font-size: 15px;
+    width: 35%;
+  }
 }
 
 @media (width <=600px) {
@@ -529,40 +697,39 @@ font-size: 30px;
     width: 370px;
     top: 70%;
   }
-       .acceptance-of-applications{
+  .acceptance-of-applications {
     background-size: 270%;
   }
-  .main-acceptance-of-applications{
+  .main-acceptance-of-applications {
     padding: 30px;
-    
   }
-  .Acceptance-of-applications{
-  margin-top: 10px;
-}
-.Tire-disc-selection h1{
-font-size: 39px;
-}
-.Tire-disc-selection p{
-font-size: 25px;
-}
-.Acceptance-of-applications h1{
-font-size: 39px;
-}
-.number{
-  font-size: 15px;
-  width: 29%;
-}
+  .Acceptance-of-applications {
+    margin-top: 10px;
+  }
+  .Tire-disc-selection h1 {
+    font-size: 39px;
+  }
+  .Tire-disc-selection p {
+    font-size: 25px;
+  }
+  .Acceptance-of-applications h1 {
+    font-size: 39px;
+  }
+  .number {
+    font-size: 15px;
+    width: 29%;
+  }
 }
 @media (width <=533px) {
-.service-list li{
-line-height: 45px;
-}
-.service-list span{
-float: none;
-margin-left: 20px;
-font-weight: 600;
-font-size: 22px;
-}
+  .service-list li {
+    line-height: 45px;
+  }
+  .service-list span {
+    float: none;
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 22px;
+  }
 }
 @media (width <=500px) {
   .bunner-button {
@@ -571,58 +738,55 @@ font-size: 22px;
   .wheels-adaptiv {
     top: 73%;
   }
-    .acceptance-of-applications{
+  .acceptance-of-applications {
     background-size: 360%;
     height: 100%;
   }
-  .main-acceptance-of-applications{
+  .main-acceptance-of-applications {
     padding: 30px;
-    
   }
-  .Acceptance-of-applications{
-  margin-top: 10px;
-}
-.Tire-disc-selection h1{
-font-size: 30px;
-}
-.Tire-disc-selection p{
-font-size: 25px;
-}
-.Acceptance-of-applications h1{
-font-size: 30px;
-}
-.number{
-  font-size: 15px;
-  width: 35%;
-}
+  .Acceptance-of-applications {
+    margin-top: 10px;
+  }
+  .Tire-disc-selection h1 {
+    font-size: 30px;
+  }
+  .Tire-disc-selection p {
+    font-size: 25px;
+  }
+  .Acceptance-of-applications h1 {
+    font-size: 30px;
+  }
+  .number {
+    font-size: 15px;
+    width: 35%;
+  }
 }
 
 @media (width <=465px) {
-
-   .acceptance-of-applications{
+  .acceptance-of-applications {
     background-size: 470%;
     height: 100%;
   }
-  .main-acceptance-of-applications{
+  .main-acceptance-of-applications {
     padding: 25px;
-    
   }
-  .Acceptance-of-applications{
-  margin-top: 10px;
-}
-.Tire-disc-selection h1{
-font-size: 20px;
-}
-.Tire-disc-selection p{
-font-size: 15px;
-}
-.Acceptance-of-applications h1{
-font-size: 20px;
-}
-.number{
-  font-size: 16px;
-  width: 40%;
-}
+  .Acceptance-of-applications {
+    margin-top: 10px;
+  }
+  .Tire-disc-selection h1 {
+    font-size: 20px;
+  }
+  .Tire-disc-selection p {
+    font-size: 15px;
+  }
+  .Acceptance-of-applications h1 {
+    font-size: 20px;
+  }
+  .number {
+    font-size: 16px;
+    width: 40%;
+  }
   .banner-content {
     padding: 29px;
   }
@@ -657,24 +821,28 @@ font-size: 20px;
   }
 }
 @media (width <=380px) {
-  .services-header h1{
+  .number {
+    font-size: 14px;
+    width: 47%;
+  }
+  .services-header h1 {
     margin-top: 40px;
-  font-size: 24px;
+    font-size: 24px;
   }
-  .service-icon h2{
-  font-size: 18px;
+  .service-icon h2 {
+    font-size: 18px;
   }
-.number{
-  font-size: 14px;
-  width: 47%;
-}
-.service-list li{
-font-size: 22px;
-font-weight: 500;
-}
-.service-list span{
-font-size: 20px;
-}
+  .number {
+    font-size: 14px;
+    width: 47%;
+  }
+  .service-list li {
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .service-list span {
+    font-size: 20px;
+  }
 }
 
 /* ===== Адаптивность услуг ===== */
