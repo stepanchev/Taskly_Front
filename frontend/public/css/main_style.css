@@ -152,7 +152,7 @@ body {
 .acceptance-of-applications{
   background-image: url(../images/background\ for\ accepting\ applications.png);
    background-position: center center;
-
+ background-size: 100%;
   height: 1100px;
   background-repeat: no-repeat;
   
@@ -204,6 +204,12 @@ border-radius: 15px;
     left: 21%;
     top: 64%;
   }
+  .acceptance-of-applications{
+    background-size: 130%;
+  }
+  .main-acceptance-of-applications{
+    padding: 60px;
+  }
 }
 
 @media (width <=1350px) {
@@ -237,6 +243,12 @@ border-radius: 15px;
   .bunner-button {
     left: 28%;
     top: 54%;
+  }
+    .acceptance-of-applications{
+    background-size: 147%;
+  }
+  .main-acceptance-of-applications{
+    padding: 76px;
   }
 }
 
@@ -280,9 +292,27 @@ border-radius: 15px;
     right: 0;
     top: 64%;
   }
-}
 
+     .acceptance-of-applications{
+    background-size: 196%;
+  }
+  .main-acceptance-of-applications{
+    padding: 35px;
+  }
+}
+@media (width <=800px) {
+     .acceptance-of-applications{
+    background-size: 250%;
+  }
+  .main-acceptance-of-applications{
+    padding: 25px;
+  }
+  .Acceptance-of-applications{
+  margin-top: 40px;
+}
+}
 @media (width <=700px) {
+ 
   .wheels-adaptiv {
     width: 400px;
     top: 71%;
@@ -293,6 +323,30 @@ border-radius: 15px;
     left: 10px;
     width: 35%;
   }
+   .acceptance-of-applications{
+    background-size: 360%;
+    height: 100%;
+  }
+  .main-acceptance-of-applications{
+    padding: 30px;
+    
+  }
+  .Acceptance-of-applications{
+  margin-top: 10px;
+}
+.Tire-disc-selection h1{
+font-size: 30px;
+}
+.Tire-disc-selection p{
+font-size: 25px;
+}
+.Acceptance-of-applications h1{
+font-size: 30px;
+}
+.number{
+  font-size: 15px;
+  width: 35%;
+}
 }
 
 @media (width <=630px) {
@@ -311,6 +365,30 @@ border-radius: 15px;
   .banner-text p {
     font-size: 3.9vw;
   }
+   .acceptance-of-applications{
+    background-size: 360%;
+    height: 100%;
+  }
+  .main-acceptance-of-applications{
+    padding: 30px;
+    
+  }
+  .Acceptance-of-applications{
+  margin-top: 10px;
+}
+.Tire-disc-selection h1{
+font-size: 30px;
+}
+.Tire-disc-selection p{
+font-size: 25px;
+}
+.Acceptance-of-applications h1{
+font-size: 30px;
+}
+.number{
+  font-size: 15px;
+  width: 35%;
+}
 }
 
 @media (width <=600px) {
@@ -325,6 +403,29 @@ border-radius: 15px;
     width: 370px;
     top: 70%;
   }
+       .acceptance-of-applications{
+    background-size: 270%;
+  }
+  .main-acceptance-of-applications{
+    padding: 30px;
+    
+  }
+  .Acceptance-of-applications{
+  margin-top: 10px;
+}
+.Tire-disc-selection h1{
+font-size: 39px;
+}
+.Tire-disc-selection p{
+font-size: 25px;
+}
+.Acceptance-of-applications h1{
+font-size: 39px;
+}
+.number{
+  font-size: 15px;
+  width: 29%;
+}
 }
 @media (width <=500px) {
   .bunner-button {
@@ -333,9 +434,58 @@ border-radius: 15px;
   .wheels-adaptiv {
     top: 73%;
   }
+    .acceptance-of-applications{
+    background-size: 360%;
+    height: 100%;
+  }
+  .main-acceptance-of-applications{
+    padding: 30px;
+    
+  }
+  .Acceptance-of-applications{
+  margin-top: 10px;
+}
+.Tire-disc-selection h1{
+font-size: 30px;
+}
+.Tire-disc-selection p{
+font-size: 25px;
+}
+.Acceptance-of-applications h1{
+font-size: 30px;
+}
+.number{
+  font-size: 15px;
+  width: 35%;
+}
 }
 
 @media (width <=465px) {
+
+   .acceptance-of-applications{
+    background-size: 470%;
+    height: 100%;
+  }
+  .main-acceptance-of-applications{
+    padding: 25px;
+    
+  }
+  .Acceptance-of-applications{
+  margin-top: 10px;
+}
+.Tire-disc-selection h1{
+font-size: 20px;
+}
+.Tire-disc-selection p{
+font-size: 15px;
+}
+.Acceptance-of-applications h1{
+font-size: 20px;
+}
+.number{
+  font-size: 10px;
+  width: 48%;
+}
   .banner-content {
     padding: 29px;
   }
