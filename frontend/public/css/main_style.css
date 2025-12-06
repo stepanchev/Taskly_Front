@@ -190,6 +190,10 @@ border-radius: 15px;
     left: 22%;
     top: 57%;
   }
+   .main-acceptance-of-applications{
+    padding: 100px;
+    
+  }
 }
 
 @media (width <=1890px) {
@@ -295,6 +299,7 @@ border-radius: 15px;
 
      .acceptance-of-applications{
     background-size: 196%;
+    height: 100%;
   }
   .main-acceptance-of-applications{
     padding: 35px;
@@ -483,8 +488,8 @@ font-size: 15px;
 font-size: 20px;
 }
 .number{
-  font-size: 10px;
-  width: 48%;
+  font-size: 16px;
+  width: 40%;
 }
   .banner-content {
     padding: 29px;
@@ -519,10 +524,16 @@ font-size: 20px;
     display: none;
   }
 }
+@media (width <=380px) {
+.number{
+  font-size: 14px;
+  width: 47%;
+}
+}
 
 /* ===== Адаптивность услуг ===== */
 /* Мобильные телефоны (до 767px) */
-@media (max-width: 767px) {
+/* @media (max-width: 785px) {
   .services {
     padding: 60px 15px 0;
   }
@@ -580,25 +591,18 @@ font-size: 20px;
   }
 
   .main-photo {
-    width: 100%;
-    justify-content: center;
-    order: 1;
-    margin-bottom: 30px;
+  display: none;
   }
 
   .main-photo img {
-    width: 100%;
-    max-width: 500px;
-    margin-top: 0;
-    margin-left: 0;
-    position: relative;
-    top: auto;
-    right: auto;
+     display: none;
   }
 }
+@media(width <=789px ){
 
+}
 /* Очень маленькие экраны (до 480px) */
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   .services-header h1 {
     font-size: 20px;
     margin-bottom: 25px;
@@ -639,10 +643,10 @@ font-size: 20px;
   .main-photo img {
     max-width: 400px;
   }
-}
+} */
 
 /* Альбомная ориентация на мобильных */
-@media (max-width: 767px) and (orientation: landscape) {
+/* @media (max-width: 780px) and (orientation: landscape) {
   .services-header h1 {
     font-size: 22px;
     margin-bottom: 25px;
@@ -664,10 +668,10 @@ font-size: 20px;
   .main-photo img {
     max-width: 400px;
   }
-}
+} */
 
 /* Планшеты (768px - 1199px) */
-@media (min-width: 768px) and (max-width: 1199px) {
+/* @media (min-width: 780px) and (max-width: 1199px) {
   .services {
     padding: 30px 20px 0;
   }
@@ -715,10 +719,10 @@ font-size: 20px;
     top: auto;
     right: auto;
   }
-}
+} */
 
 /* Ноутбуки (1200px - 1599px) */
-@media (min-width: 1200px) and (max-width: 1599px) {
+/* @media (min-width: 1200px) and (max-width: 1599px) {
   .services {
     padding: 30px 20px 0;
   }
@@ -735,4 +739,4 @@ font-size: 20px;
     width: 650px;
     margin-left: -250px;
   }
-}
+} */ */
