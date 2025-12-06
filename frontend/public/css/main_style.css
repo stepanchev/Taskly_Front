@@ -149,6 +149,42 @@ body {
   top: 1600px;
   right: 0%;
 }
+.acceptance-of-applications{
+  background-image: url(../images/background\ for\ accepting\ applications.png);
+   background-position: center center;
+
+  height: 1100px;
+  background-repeat: no-repeat;
+  
+}
+.main-acceptance-of-applications{
+  color: white;
+  padding: 70px;
+  
+}
+.Acceptance-of-applications{
+  margin-top: 200px;
+}
+.Tire-disc-selection h1{
+font-size: 45px;
+}
+.Tire-disc-selection p{
+font-size: 32px;
+}
+.Acceptance-of-applications h1{
+  font-size: 45px;
+}
+.number{
+font-size: 32px;
+border: solid #FFFFFF 4px;
+width: 300px;
+text-align: center;
+padding: 15px;
+border-radius: 15px;
+}
+.Waiting-period{
+  font-size: 24;
+}
 @media (width <=1970px) {
   .bunner-button {
     left: 22%;
