@@ -216,7 +216,23 @@ border-radius: 15px;
   }
 }
 
+@media (width <=1292px) {
+.main-photo img{
+ display: none; 
+}
+.services-row{
+display: flex;
+flex-direction: column;
+}
+.service-card{
+width: 85%;
+margin: 2px auto;
+}
+}
 @media (width <=1350px) {
+  .main-photo img{
+  width: 45%;
+  }
   .banner-text p {
     font-size: 1.9vw;
   }
@@ -355,6 +371,9 @@ font-size: 30px;
 }
 
 @media (width <=630px) {
+  .service-list li{
+  line-height: 30px;
+  }
   .bunner-button {
     position: relative;
     left: 10px;
@@ -430,6 +449,17 @@ font-size: 39px;
 .number{
   font-size: 15px;
   width: 29%;
+}
+}
+@media (width <=533px) {
+.service-list li{
+line-height: 45px;
+}
+.service-list span{
+float: none;
+margin-left: 20px;
+font-weight: 600;
+font-size: 22px;
 }
 }
 @media (width <=500px) {
@@ -525,9 +555,23 @@ font-size: 20px;
   }
 }
 @media (width <=380px) {
+  .services-header h1{
+    margin-top: 40px;
+  font-size: 24px;
+  }
+  .service-icon h2{
+  font-size: 18px;
+  }
 .number{
   font-size: 14px;
   width: 47%;
+}
+.service-list li{
+font-size: 22px;
+font-weight: 500;
+}
+.service-list span{
+font-size: 20px;
 }
 }
 
@@ -739,4 +783,4 @@ font-size: 20px;
     width: 650px;
     margin-left: -250px;
   }
-} */ */
+} */
