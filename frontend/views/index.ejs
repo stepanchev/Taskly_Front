@@ -4,24 +4,105 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= title %></title>
-     <link rel="stylesheet" href="/css/main_style.css" />
+    <link rel="stylesheet" href="/css/main_style.css" />
   </head>
   <body class="bg-gray-100 min-h-screen p-8">
-<%- include('partials/header') %>
-<main>
-  <section class="banner">
-<div class="banner-content">
-<div class="banner-text">
+    <%- include('partials/header') %>
+    <main>
+      <section class="banner">
+        <div class="banner-content">
+          <div class="banner-text">
+            <h2 class="h2-active"><span>✓</span>Выбрали</h2>
+            <h2><span>✓</span>Купили</h2>
+            <h2><span>✓</span>Устоновили</h2>
+            <p>
+              Пропустите этап поиска шиномонтажа <br />
+              и лишних платежей. Начните с первого<br />
+              шага!
+            </p>
+            <button class="bunner-button">В каталог</button>
+            <img src="../images/wheels.png" alt="" class="wheels-adaptiv" />
+          </div>
+        </div>
+      </section>
 
-<h2 class="h2-active"><span>✓</span>Выбрали</h2>
-<h2 ><span>✓</span>Купили</h2>
-<h2><span>✓</span>Устоновили</h2>
-<p>Пропустите этап поиска шиномонтажа <br> и лишних платежей. Начните с первого<br> шага!</p>
-<button class="bunner-button">В каталог</button>
-<img src="../images/wheels.png" alt=""  class="wheels-adaptiv">
-</div>
-</div>
-  </section>
-</main>
+      <section class="services">
+        <div class="services-header">
+          <h1>Мы быстро и качественно выполним следующие виды работ</h1>
+        </div>
+
+        <div class="services-content">
+          <div class="services-grid">
+            <div class="services-row">
+              <div class="service-card">
+                <div class="card-header">
+                  <div class="service-icon">
+                    <img
+                      src="../public/images/service-icon-image1.png"
+                      alt="service-icon"
+                    />
+                    <h2>Шиномонтаж и балансировка</h2>
+                  </div>
+                </div>
+                <ul class="service-list">
+                  <li>Шиномонтаж, балансировка на 3D оборудовании</li>
+                  <li>Подкачка и накачка шин азотом</li>
+                  <li>
+                    Ошиповка колёс <span class="price">5 руб. / 1 шип</span>
+                  </li>
+                  <li>
+                    Повторная ошиповка зимних <br />шин (теком)
+                    <span class="price">15 руб. / 1 шип</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="service-card">
+                <div class="card-header">
+                  <div class="service-icon">
+                    <img
+                      src="../public/images/service-icon-image2.png"
+                      alt="service-icon"
+                    />
+                    <h2>Ремонт дисков и шин</h2>
+                  </div>
+                </div>
+                <ul class="service-list">
+                  <li>Правка и ремонт дисков (литых, кованных, стальных)</li>
+                  <li>Ремонт шин</li>
+                  <li>Сварка аргоном трещин на дисках</li>
+                  <li>Продажа автокамер от 13 до 16</li>
+                  <li>Автоколпаки на все авто</li>
+                </ul>
+              </div>
+            </div>
+            <div class="services-row">
+              <div class="service-card">
+                <div class="card-header">
+                  <div class="service-icon">
+                    <img
+                      src="../public/images/service-icon-image3.png"
+                      alt="service-icon"
+                    />
+                    <h2>СТО и дополнительные услуги</h2>
+                  </div>
+                </div>
+                <ul class="service-list">
+                  <li>
+                    Продажа шин и дисков (в ассортименте и <br />под заказ)
+                  </li>
+                  <li>Замена масла, диагностика ходовой части авто</li>
+                  <li>Мелкий ремонт автомобилей</li>
+                  <li>Подбор шин/дисков</li>
+                  <li>Клубные скидки</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="main-photo">
+            <img src="../public/images/service-image.png" alt="service-image" />
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
