@@ -1,8 +1,6 @@
-<link rel="stylesheet" href="../../public/css/navbar_style.css" />
 <header class="bg-white">
   <nav class="container mx-auto px-4 py-4">
     <div class="flex justify-between items-center">
-      <!-- Логотип (добавьте свой) -->
       <div class="flex items-center space-x-2">
         <a
           href="/"
@@ -52,3 +50,53 @@
     </div>
   </nav>
 </header>
+<style>
+  /* Активный пункт меню */
+  .nav-active {
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+  }
+
+  /* Анимация подчеркивания при наведении */
+  .hover-underline {
+    position: relative;
+  }
+
+  .hover-underline::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #2563eb;
+    transition: width 0.3s ease;
+  }
+
+  .hover-underline:hover::after {
+    width: 100%;
+  }
+
+  /* Тень для header при скролле */
+  .header-scrolled {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+
+  /* Анимация иконки меню */
+  .menu-icon {
+    transition: transform 0.3s ease;
+  }
+
+  .menu-icon.active {
+    transform: rotate(90deg);
+  }
+
+  /* Плавный скролл для якорных ссылок */
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
