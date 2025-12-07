@@ -180,20 +180,19 @@ font-size: 24;
   font-weight: 700;
   margin-top: 70px;
 }
-        .gallery-container {
-          margin-top: 100px;
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-            background: rgba(0, 0, 0, 0.9);
-        }
-        
-        .gallery-track {
-            display: flex;
-            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            gap: 20px;
-        } 
+.gallery-container {
+margin-top: 100px;
+position: relative;
+width: 100%;
+overflow: hidden;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+background: rgba(0, 0, 0, 0.9);
+}
+.gallery-track {
+display: flex;
+transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+gap: 20px;
+} 
 .gallery-item {
 min-width: calc(20% - 16px);
 border-radius: 12px;
