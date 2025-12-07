@@ -3,6 +3,7 @@ import express from "express";
 import path from "path";
 import morgan from "morgan";
 import cors from "cors";
+import expressLayouts from "express-ejs-layouts";
 
 // Для работы с __dirname в ES модулях
 import { fileURLToPath } from "url";
@@ -20,6 +21,8 @@ app.use(express.urlencoded({ extended: true }));
 
 // Настройка EJS
 app.set("view engine", "ejs");
+app.use(expressLayouts);
+app.set("layout", "layout");
 app.set("views", path.join(__dirname, "../frontend/views"));
 
 // Статические файлы
