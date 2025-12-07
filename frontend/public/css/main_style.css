@@ -1,11 +1,25 @@
-@import "tailwindcss";
-
-body {
-  padding: 0;
+* {
   margin: 0;
-  font-family: "Inter", sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
 .banner-content {
   padding: 50px;
 }
@@ -785,7 +799,7 @@ body {
   }
 }
 
-@media (width <=1890px)  {
+@media (width <=1890px) {
   .bunner-button {
     left: 22%;
     top: 64%;
@@ -966,34 +980,30 @@ body {
     font-size: 15px;
     width: 35%;
   }
-  .club-discounts p{
-font-size: 3vw;
-margin-top: 0;
-padding: 0;
+  .club-discounts p {
+    font-size: 3vw;
+    margin-top: 0;
+    padding: 0;
   }
-   .club-discounts h1{
-font-size: 6vw;
-text-align: center;
+  .club-discounts h1 {
+    font-size: 6vw;
+    text-align: center;
   }
-  .club-discounts-content{
+  .club-discounts-content {
     align-items: center;
   }
-.club-discounts-content{
-display: flex;
-flex-direction:column-reverse;
-align-items: center;
-text-align: center;
-
-}
-.club-discounts-text{
-  width: 110%;
-}
-  .img-club{
-width: 250px;
-margin-left: 0;
-    
- 
-  
+  .club-discounts-content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+  .club-discounts-text {
+    width: 110%;
+  }
+  .img-club {
+    width: 250px;
+    margin-left: 0;
   }
 }
 
@@ -1042,33 +1052,30 @@ margin-left: 0;
 }
 
 @media (width <=600px) {
-      .club-discounts p{
-font-size: 3.9vw;
-padding: 50px;
-margin-top: -50px;
+  .club-discounts p {
+    font-size: 3.9vw;
+    padding: 50px;
+    margin-top: -50px;
   }
-   .club-discounts h1{
-font-size: 6vw;
-text-align: center;
+  .club-discounts h1 {
+    font-size: 6vw;
+    text-align: center;
   }
-  .club-discounts-content{
+  .club-discounts-content {
     align-items: center;
   }
-.club-discounts-content{
-display: flex;
-flex-direction:column-reverse;
-align-items: center;
-text-align: center;
-
-}
-.club-discounts-text{
-  width: 110%;
-}
+  .club-discounts-content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+  .club-discounts-text {
+    width: 110%;
+  }
   .img-club {
     width: 200px;
     height: 200px;
- 
-  
   }
   .bunner-button {
     position: relative;
@@ -1205,34 +1212,30 @@ text-align: center;
   }
 }
 @media (width <=380px) {
-
-    .club-discounts p{
-font-size: 4.9vw;
-margin-top: 0;
-padding: 0;
+  .club-discounts p {
+    font-size: 4.9vw;
+    margin-top: 0;
+    padding: 0;
   }
-   .club-discounts h1{
-font-size: 6vw;
-text-align: center;
+  .club-discounts h1 {
+    font-size: 6vw;
+    text-align: center;
   }
-  .club-discounts-content{
+  .club-discounts-content {
     align-items: center;
   }
-.club-discounts-content{
-display: flex;
-flex-direction:column-reverse;
-align-items: center;
-text-align: center;
-
-}
-.club-discounts-text{
-  width: 110%;
-}
-  .img-club{
+  .club-discounts-content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+  .club-discounts-text {
+    width: 110%;
+  }
+  .img-club {
     width: 200px;
     height: 200px;
- 
-  
   }
   .number {
     font-size: 14px;
