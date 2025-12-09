@@ -1,48 +1,79 @@
-<link rel="stylesheet" href="../../public/css/navbar_style.css" />
+<script src="https://cdn.tailwindcss.com"></script>
 <header class="bg-white">
   <nav class="container mx-auto px-10 py-8">
-    <div class="flex justify-between items-center">
-      <a href="/" class="text-2xl font-bold text-black">
+    <div class="flex justify-between items-start">
+      <a href="/" class="w-44">
         <img src="https://avtoobuv73.ru/img/logo.png" alt="logo" />
       </a>
 
-      <div class="hidden md:flex items-center space-x-6 mr-8">
-        <a
-          href="/"
-          class="text-gray-500 font-bold hover:text-black transition-all duration-200"
-        >
-          Главная
-        </a>
-        <a
-          href="/selection"
-          class="text-gray-500 font-bold hover:text-black transition-all duration-200"
-        >
-          Подбор
-        </a>
-        <a
-          href="/catalog"
-          class="text-gray-500 font-bold hover:text-black transition-all duration-200"
-        >
-          Каталог
-        </a>
-        <a
-          href="/about"
-          class="text-gray-500 font-bold hover:text-black transition-all duration-200"
-        >
-          О нас
-        </a>
-        <a
-          href="/reviews"
-          class="text-gray-500 font-bold hover:text-black transition-all duration-200"
-        >
-          Отзывы
-        </a>
-        <a
-          href="/contacts"
-          class="text-gray-500 font-bold hover:text-black transition-all duration-200"
-        >
-          Контакты
-        </a>
+      <div class="flex flex-col items-end w-full md:w-auto">
+        <div class="hidden md:flex items-center space-x-6 mb-4">
+          <a
+            href="/"
+            class="text-gray-400 font-bold hover:text-black transition-all duration-200"
+          >
+            Главная
+          </a>
+          <a
+            href="/selection"
+            class="text-gray-400 font-bold hover:text-black transition-all duration-200"
+          >
+            Подбор
+          </a>
+          <a
+            href="/catalog"
+            class="text-gray-400 font-bold hover:text-black transition-all duration-200"
+          >
+            Каталог
+          </a>
+          <a
+            href="/about"
+            class="text-gray-400 font-bold hover:text-black transition-all duration-200"
+          >
+            О нас
+          </a>
+          <a
+            href="/reviews"
+            class="text-gray-400 font-bold hover:text-black transition-all duration-200"
+          >
+            Отзывы
+          </a>
+          <a
+            href="/contacts"
+            class="text-gray-400 font-bold hover:text-black transition-all duration-200"
+          >
+            Контакты
+          </a>
+        </div>
+
+        <div class="flex gap-10">
+          <div>
+            <input
+              type="text"
+              placeholder="⌕ Поиск"
+              style="
+                width: 25vw;
+                height: 35px;
+                font-size: 19px;
+                padding: 12px 10px;
+              "
+              class="bg-gray-100 rounded focus:outline-none focus:ring-2 focus:ring-gray-300 font-semibold hover:bg-gray-200 hover:placeholder-white placeholder-gray-500"
+            />
+          </div>
+          <div>
+            <a href="/cart" class="relative">
+              <svg
+                class="w-8 h-8 text-gray-400 hover:text-gray-600 transition-colors"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
