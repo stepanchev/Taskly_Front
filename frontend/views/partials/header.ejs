@@ -1,48 +1,45 @@
+<link rel="stylesheet" href="../../public/css/navbar_style.css" />
 <header class="bg-white">
-  <nav class="container mx-auto px-4 py-4">
+  <nav class="container mx-auto px-10 py-8">
     <div class="flex justify-between items-center">
-      <div class="flex items-center space-x-2">
-        <a
-          href="/"
-          class="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors duration-200"
-        >
-        </a>
-      </div>
+      <a href="/" class="text-2xl font-bold text-black">
+        <img src="" alt="logo" />
+      </a>
 
-      <div class="hidden md:flex items-center space-x-6">
+      <div class="hidden md:flex items-center space-x-6 mr-8">
         <a
           href="/"
-          class="text-gray-700 font-medium hover:text-blue-600 hover:underline underline-offset-4 transition-colors duration-200"
+          class="text-gray-500 font-bold hover:text-black transition-all duration-200"
         >
           Главная
         </a>
         <a
           href="/selection"
-          class="text-gray-700 font-medium hover:text-blue-600 hover:underline underline-offset-4 transition-colors duration-200"
+          class="text-gray-500 font-bold hover:text-black transition-all duration-200"
         >
           Подбор
         </a>
         <a
           href="/catalog"
-          class="text-gray-700 font-medium hover:text-blue-600 hover:underline underline-offset-4 transition-colors duration-200"
+          class="text-gray-500 font-bold hover:text-black transition-all duration-200"
         >
           Каталог
         </a>
         <a
           href="/about"
-          class="text-gray-700 font-medium hover:text-blue-600 hover:underline underline-offset-4 transition-colors duration-200"
+          class="text-gray-500 font-bold hover:text-black transition-all duration-200"
         >
           О нас
         </a>
         <a
           href="/reviews"
-          class="text-gray-700 font-medium hover:text-blue-600 hover:underline underline-offset-4 transition-colors duration-200"
+          class="text-gray-500 font-bold hover:text-black transition-all duration-200"
         >
           Отзывы
         </a>
         <a
           href="/contacts"
-          class="text-gray-700 font-medium hover:text-blue-600 hover:underline underline-offset-4 transition-colors duration-200"
+          class="text-gray-500 font-bold hover:text-black transition-all duration-200"
         >
           Контакты
         </a>
@@ -50,53 +47,3 @@
     </div>
   </nav>
 </header>
-<style>
-  /* Активный пункт меню */
-  .nav-active {
-    color: #2563eb;
-    font-weight: 600;
-    text-decoration: underline;
-    text-underline-offset: 6px;
-  }
-
-  /* Анимация подчеркивания при наведении */
-  .hover-underline {
-    position: relative;
-  }
-
-  .hover-underline::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: #2563eb;
-    transition: width 0.3s ease;
-  }
-
-  .hover-underline:hover::after {
-    width: 100%;
-  }
-
-  /* Тень для header при скролле */
-  .header-scrolled {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.95);
-  }
-
-  /* Анимация иконки меню */
-  .menu-icon {
-    transition: transform 0.3s ease;
-  }
-
-  .menu-icon.active {
-    transform: rotate(90deg);
-  }
-
-  /* Плавный скролл для якорных ссылок */
-  html {
-    scroll-behavior: smooth;
-  }
-</style>
