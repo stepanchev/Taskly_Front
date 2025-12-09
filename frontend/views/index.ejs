@@ -282,13 +282,13 @@
             </div>
             
             <div class="gallery-controls">
-                <button class="nav-btn prev-btn">
+                <button class="nav-btn prev-btn" style="color: black; background-color:white;">
                 <a><</a>
                 </button>
                 
 
                 
-                <button class="nav-btn next-btn">
+                <button class="nav-btn next-btn" style="color: black; background-color:white;">
                 <a>></a>
                 </button>
                 
@@ -300,119 +300,6 @@
     </div>
         <script src="../js/main.js"></script>
     </main>
-        <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const galleryTrack = document.querySelector('.gallery-track');
-            const prevBtn = document.querySelector('.prev-btn');
-            const nextBtn = document.querySelector('.next-btn');
-            const indicators = document.querySelectorAll('.indicator');
-            const galleryItems = document.querySelectorAll('.gallery-item');
-            const currentCounter = document.querySelector('.gallery-counter .current');
-            const totalCounter = document.querySelector('.gallery-counter .total');
-            
-            let currentIndex = 0;
-            const totalItems = galleryItems.length;
-            totalCounter.textContent = totalItems;
-            
-            // Функция обновления позиции галереи
-            function updateGalleryPosition() {
-                // Получаем ширину одного элемента с учетом gap
-                const itemWidth = galleryItems[0].offsetWidth + 20;
-                galleryTrack.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-                
-                // Обновляем активный индикатор
-                indicators.forEach((indicator, index) => {
-                    if (index === currentIndex) {
-                        indicator.classList.add('active');
-                    } else {
-                        indicator.classList.remove('active');
-                    }
-                });
-                
-                // Обновляем счетчик
-                currentCounter.textContent = currentIndex + 1;
-            }
-            
-            // Следующее изображение
-            nextBtn.addEventListener('click', function() {
-                if (currentIndex < totalItems - 1) {
-                    currentIndex++;
-                } else {
-                    currentIndex = 0; // Возвращаемся к первому изображению
-                }
-                updateGalleryPosition();
-            });
-            
-            // Предыдущее изображение
-            prevBtn.addEventListener('click', function() {
-                if (currentIndex > 0) {
-                    currentIndex--;
-                } else {
-                    currentIndex = totalItems - 1; // Переходим к последнему изображению
-                }
-                updateGalleryPosition();
-            });
-            
-            // Клик по индикаторам
-            indicators.forEach(indicator => {
-                indicator.addEventListener('click', function() {
-                    currentIndex = parseInt(this.getAttribute('data-index'));
-                    updateGalleryPosition();
-                });
-            });
-            
-            // Обработка свайпов на мобильных устройствах
-            let startX = 0;
-            let endX = 0;
-            
-            galleryTrack.addEventListener('touchstart', function(e) {
-                startX = e.touches[0].clientX;
-            });
-            
-            galleryTrack.addEventListener('touchend', function(e) {
-                endX = e.changedTouches[0].clientX;
-                handleSwipe();
-            });
-            
-            function handleSwipe() {
-                const swipeThreshold = 50; // минимальная дистанция свайпа
-                
-                if (startX - endX > swipeThreshold) {
-                    // Свайп влево - следующее изображение
-                    nextBtn.click();
-                } else if (endX - startX > swipeThreshold) {
-                    // Свайп вправо - предыдущее изображение
-                    prevBtn.click();
-                }
-            }
-            
-            // Автоматическая смена изображений каждые 5 секунд
-            let autoSlideInterval = setInterval(() => {
-                nextBtn.click();
-            }, 5000);
-            
-            // Останавливаем автопрокрутку при наведении на галерею
-            const galleryContainer = document.querySelector('.gallery-container');
-            galleryContainer.addEventListener('mouseenter', () => {
-                clearInterval(autoSlideInterval);
-            });
-            
-            galleryContainer.addEventListener('mouseleave', () => {
-                autoSlideInterval = setInterval(() => {
-                    nextBtn.click();
-                }, 5000);
-            });
-            
-            // Адаптация при изменении размера окна
-            window.addEventListener('resize', function() {
-                // Небольшая задержка для корректного пересчета после изменения размера
-                setTimeout(updateGalleryPosition, 100);
-            });
-            
-            // Инициализация галереи
-            updateGalleryPosition();
-        });
-    </script>
     </main>
   </body>
 </html>
