@@ -352,8 +352,8 @@ html {
   position: relative;
   width: 100%;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  background: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 10px 30px rgba(66, 41, 41, 0.4);
+  background: rgb(0, 0, 0);
   padding: 20px 0;
 }
 
@@ -379,7 +379,7 @@ html {
 
 .gallery-item:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 15px 30px rgba(7, 6, 6, 0.6);
   opacity: 0.9;
 }
 
@@ -405,8 +405,8 @@ html {
 }
 
 .gallery-btn {
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgb(255, 0, 0);
+  border: 2px solid rgb(255, 13, 13);
   color: white;
   width: clamp(40px, 5vw, 50px);
   height: clamp(40px, 5vw, 50px);
@@ -421,7 +421,7 @@ html {
 }
 
 .gallery-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgb(255, 255, 255);
   border-color: rgba(255, 255, 255, 0.6);
   transform: scale(1.1);
 }
