@@ -318,6 +318,7 @@ html {
 }
 
 .gallery-container h1 {
+  margin-bottom: 30px;
   text-align: center;
   color: #ffffff;
   font-weight: 700;
@@ -325,7 +326,6 @@ html {
   font-size: clamp(24px, 3vw, 36px);
 }
 .gallery-container {
-  margin-top: 100px;
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -393,6 +393,7 @@ html {
   align-items: center;
   gap: clamp(15px, 3vw, 25px);
   padding-top: 20px;
+  font-weight: 900;
 }
 
 .gallery-btn {
@@ -406,9 +407,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(16px, 2vw, 20px);
   transition: all 0.3s ease;
-  user-select: none;
 }
 
 .gallery-btn:hover {
