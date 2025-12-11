@@ -1066,7 +1066,7 @@ html {
 .hexagon_text_column:hover {
   transform: translateY(-10px);
 }
-h1 {
+ .main-acceptance-of-applications h1 {
             font-size: 2.5rem;
             margin-bottom: 20px;
             position: relative;
@@ -1074,7 +1074,7 @@ h1 {
             color: #fff;
         }
 
-        h1::after {
+        .main-acceptance-of-applications h1::after {
             content: '';
             position: absolute;
             bottom: -10px;
@@ -1084,7 +1084,7 @@ h1 {
             background-color: #fff;
         }
 
-        p {
+        .main-acceptance-of-applications p {
             font-size: 1.1rem;
             color: #ccc;
             margin-bottom: 15px;
