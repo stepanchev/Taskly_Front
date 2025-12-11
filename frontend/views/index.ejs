@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -7,182 +6,519 @@
     <title><%= title %></title>
     <link rel="stylesheet" href="/css/main_style.css" />
   </head>
-<body > 
-   <main>
-
-   <div class="container">
+  <body>
+    <main>
+      <div class="container">
         <div class="banner-container">
-  
-            <div class="banner">
-                <div class="banner-slide">
-                    <img src="https://avtoobuv73.ru/images/slider-12-08-22.jpg" alt="колеса" >
-                
-                </div>
-                <div class="banner-slide">
-                    <img src="https://avtoobuv73.ru/images/slider-sale-2.webp" alt="шины">
-                    
-                </div>
-                <div class="banner-slide">
-                    <img src="https://avtoobuv73.ru/images/slide-23-07-24.jpg" alt="акции">
-               
-                </div>
-                <!-- <div class="banner-slide">
-                    <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07" alt="клубные скидки">
-                    
-                </div>
-                <div class="banner-slide">
-                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="шиномонтаж">
-                 
-                </div> -->
+          <div class="banner">
+            <div class="banner-slide">
+              <img
+                src="https://avtoobuv73.ru/images/slider-12-08-22.jpg"
+                alt="колеса"
+              />
             </div>
+            <div class="banner-slide">
+              <img
+                src="https://avtoobuv73.ru/images/slider-sale-2.webp"
+                alt="шины"
+              />
+            </div>
+            <div class="banner-slide">
+              <img
+                src="https://avtoobuv73.ru/images/slide-23-07-24.jpg"
+                alt="акции"
+              />
+            </div>
+          </div>
 
-         <!-- Кнопки навигации -->
-        <button class="banner-btn banner-prev">
+          <!-- Кнопки навигации -->
+          <button class="banner-btn banner-prev">
             <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="banner-btn banner-next">
+          </button>
+          <button class="banner-btn banner-next">
             <i class="fas fa-chevron-right"></i>
-        </button>
+          </button>
 
-         
-            <div class="banner-dots">
-             
-            </div>
+          <div class="banner-dots"></div>
         </div>
-    </div>
-<section class="card_section">
-  <div class="card_conteiner"> 
-      <div class="card">
-        <div class="product-image">
-          <img src="../images/card_image" alt="">
-        </div>
-        <div class="product-info">
-            <div class="category">✱ Зимние шины</div>
-            <div class="product-name">Ikon (Nokian Tyres) Autograph Ice 9 SUV</div>
-            <div class="prices">
-                <span class="current-price">17 190₽</span>
+      </div>
+      <section class="card_section">
+        <div class="my-24">
+          <div class="tabs-controls">
+            <div class="caard-title">
+              <h1>Подобрали для вас</h1>
             </div>
-            <div class="buttons">
-                <a class="btn-basket">В корзину</a>
-                <button class="btn-order">Заказать сейчас</button>
+            <div class="tabs-buttons">
+              <button class="tab-btn active" data-tab="recommended">
+                Рекомендуемые
+              </button>
+              <button class="tab-btn" data-tab="winter-tires">
+                Зимние шины
+              </button>
+              <button class="tab-btn" data-tab="summer-tires">
+                Летние шины
+              </button>
+              <button class="tab-btn" data-tab="discs">Диски</button>
             </div>
-        </div>
-    </div>
-      <div class="card">
-        <div class="product-image">
-          <img src="../images/card_image" alt="">
-        </div>
-        <div class="product-info">
-            <div class="category">Зимние шины</div>
-            <div class="product-name">Ikon (Nokian Tyres) Autograph Ice 9 SUV</div>
-            <div class="prices">
-                <span class="current-price">17 190₽</span>
+          </div>
+
+          <div class="tabs-container">
+            <div class="tab-content active" id="recommended">
+              <div class="card_conteiner">
+                <div class="card">
+                  <div class="product-image">
+                    <img src="../images/card_image" alt="" />
+                  </div>
+                  <div class="product-info">
+                    <div class="category">✱ Зимние шины</div>
+                    <div class="product-name">
+                      Ikon (Nokian Tyres) Autograph Ice 9 SUV
+                    </div>
+                    <div class="prices">
+                      <span class="current-price">17 190₽</span>
+                    </div>
+                    <div class="buttons">
+                      <a class="btn-basket">В корзину</a>
+                      <button class="btn-order">Заказать сейчас</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="product-image">
+                    <img src="../images/card_image" alt="" />
+                  </div>
+                  <div class="product-info">
+                    <div class="category">Зимние шины</div>
+                    <div class="product-name">
+                      Ikon (Nokian Tyres) Autograph Ice 9 SUV
+                    </div>
+                    <div class="prices">
+                      <span class="current-price">17 190₽</span>
+                    </div>
+                    <div class="buttons">
+                      <a class="btn-basket">В корзину</a>
+                      <button class="btn-order">Заказать сейчас</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="product-image">
+                    <img src="../images/card_image" alt="" />
+                  </div>
+                  <div class="product-info">
+                    <div class="category">Зимние шины</div>
+                    <div class="product-name">
+                      Ikon (Nokian Tyres) Autograph Ice 9 SUV
+                    </div>
+                    <div class="prices">
+                      <span class="current-price">17 190₽</span>
+                    </div>
+                    <div class="buttons">
+                      <a class="btn-basket">В корзину</a>
+                      <button class="btn-order">Заказать сейчас</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="product-image">
+                    <img src="../images/card_image" alt="" />
+                  </div>
+                  <div class="product-info">
+                    <div class="category">Зимние шины</div>
+                    <div class="product-name">
+                      Ikon (Nokian Tyres) Autograph Ice 9 SUV
+                    </div>
+                    <div class="prices">
+                      <span class="current-price">17 190₽</span>
+                    </div>
+                    <div class="buttons">
+                      <a class="btn-basket">В корзину</a>
+                      <button class="btn-order">Заказать сейчас</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="product-image">
+                    <img src="../images/card_image" alt="" />
+                  </div>
+                  <div class="product-info">
+                    <div class="category">Зимние шины</div>
+                    <div class="product-name">
+                      Ikon (Nokian Tyres) Autograph Ice 9 SUV
+                    </div>
+                    <div class="prices">
+                      <span class="current-price">17 190₽</span>
+                    </div>
+                    <div class="buttons">
+                      <a class="btn-basket">В корзину</a>
+                      <button class="btn-order">Заказать сейчас</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="product-image">
+                    <img src="../images/card_image" alt="" />
+                  </div>
+                  <div class="product-info">
+                    <div class="category">Зимние шины</div>
+                    <div class="product-name">
+                      Ikon (Nokian Tyres) Autograph Ice 9 SUV
+                    </div>
+                    <div class="prices">
+                      <span class="current-price">17 190₽</span>
+                    </div>
+                    <div class="buttons">
+                      <a class="btn-basket">В корзину</a>
+                      <button class="btn-order">Заказать сейчас</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="product-image">
+                    <img src="../images/card_image" alt="" />
+                  </div>
+                  <div class="product-info">
+                    <div class="category">Зимние шины</div>
+                    <div class="product-name">
+                      Ikon (Nokian Tyres) Autograph Ice 9 SUV
+                    </div>
+                    <div class="prices">
+                      <span class="current-price">17 190₽</span>
+                    </div>
+                    <div class="buttons">
+                      <a class="btn-basket">В корзину</a>
+                      <button class="btn-order">Заказать сейчас</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="product-image">
+                    <img src="../images/card_image" alt="" />
+                  </div>
+                  <div class="product-info">
+                    <div class="category">Зимние шины</div>
+                    <div class="product-name">
+                      Ikon (Nokian Tyres) Autograph Ice 9 SUV
+                    </div>
+                    <div class="prices">
+                      <span class="current-price">17 190₽</span>
+                    </div>
+                    <div class="buttons">
+                      <a class="btn-basket">В корзину</a>
+                      <button class="btn-order">Заказать сейчас</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="buttons">
-                <a class="btn-basket">В корзину</a>
-                <button class="btn-order">Заказать сейчас</button>
+
+            <!-- Зимние шины -->
+            <div class="tab-content" id="winter-tires">
+              <div class="card_conteiner">
+                <div class="card">
+                  <div class="product-image">
+                    <img src="../images/card_image" alt="" />
+                  </div>
+                  <div class="product-info">
+                    <div class="category">✱ Зимние шины</div>
+                    <div class="product-name">
+                      Ikon (Nokian Tyres) Autograph Ice 9 SUV
+                    </div>
+                    <div class="prices">
+                      <span class="current-price">17 190₽</span>
+                    </div>
+                    <div class="buttons">
+                      <a class="btn-basket">В корзину</a>
+                      <button class="btn-order">Заказать сейчас</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="product-image">
+                    <img src="../images/card_image" alt="" />
+                  </div>
+                  <div class="product-info">
+                    <div class="category">✱ Зимние шины</div>
+                    <div class="product-name">
+                      Ikon (Nokian Tyres) Autograph Ice 9 SUV
+                    </div>
+                    <div class="prices">
+                      <span class="current-price">17 190₽</span>
+                    </div>
+                    <div class="buttons">
+                      <a class="btn-basket">В корзину</a>
+                      <button class="btn-order">Заказать сейчас</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="product-image">
+                    <img src="../images/card_image" alt="" />
+                  </div>
+                  <div class="product-info">
+                    <div class="category">✱ Зимние шины</div>
+                    <div class="product-name">
+                      Ikon (Nokian Tyres) Autograph Ice 9 SUV
+                    </div>
+                    <div class="prices">
+                      <span class="current-price">17 190₽</span>
+                    </div>
+                    <div class="buttons">
+                      <a class="btn-basket">В корзину</a>
+                      <button class="btn-order">Заказать сейчас</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="product-image">
+                    <img src="../images/card_image" alt="" />
+                  </div>
+                  <div class="product-info">
+                    <div class="category">✱ Зимние шины</div>
+                    <div class="product-name">
+                      Ikon (Nokian Tyres) Autograph Ice 9 SUV
+                    </div>
+                    <div class="prices">
+                      <span class="current-price">17 190₽</span>
+                    </div>
+                    <div class="buttons">
+                      <a class="btn-basket">В корзину</a>
+                      <button class="btn-order">Заказать сейчас</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
-    </div>
-          <div class="card">
-        <div class="product-image">
-          <img src="../images/card_image" alt="">
-        </div>
-        <div class="product-info">
-            <div class="category">Зимние шины</div>
-            <div class="product-name">Ikon (Nokian Tyres) Autograph Ice 9 SUV</div>
-            <div class="prices">
-                <span class="current-price">17 190₽</span>
+
+            <!-- олетние шины -->
+            <div class="tab-content" id="summer-tires">
+              <div class="card_conteiner">
+                <div class="card">
+                  <div class="product-image">
+                    <img src="../images/card_image" alt="" />
+                  </div>
+                  <div class="product-info">
+                    <div class="category">✱ Зимние шины</div>
+                    <div class="product-name">
+                      Ikon (Nokian Tyres) Autograph Ice 9 SUV
+                    </div>
+                    <div class="prices">
+                      <span class="current-price">17 190₽</span>
+                    </div>
+                    <div class="buttons">
+                      <a class="btn-basket">В корзину</a>
+                      <button class="btn-order">Заказать сейчас</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="product-image">
+                    <img src="../images/card_image" alt="" />
+                  </div>
+                  <div class="product-info">
+                    <div class="category">✱ Зимние шины</div>
+                    <div class="product-name">
+                      Ikon (Nokian Tyres) Autograph Ice 9 SUV
+                    </div>
+                    <div class="prices">
+                      <span class="current-price">17 190₽</span>
+                    </div>
+                    <div class="buttons">
+                      <a class="btn-basket">В корзину</a>
+                      <button class="btn-order">Заказать сейчас</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="product-image">
+                    <img src="../images/card_image" alt="" />
+                  </div>
+                  <div class="product-info">
+                    <div class="category">✱ Зимние шины</div>
+                    <div class="product-name">
+                      Ikon (Nokian Tyres) Autograph Ice 9 SUV
+                    </div>
+                    <div class="prices">
+                      <span class="current-price">17 190₽</span>
+                    </div>
+                    <div class="buttons">
+                      <a class="btn-basket">В корзину</a>
+                      <button class="btn-order">Заказать сейчас</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="product-image">
+                    <img src="../images/card_image" alt="" />
+                  </div>
+                  <div class="product-info">
+                    <div class="category">✱ Зимние шины</div>
+                    <div class="product-name">
+                      Ikon (Nokian Tyres) Autograph Ice 9 SUV
+                    </div>
+                    <div class="prices">
+                      <span class="current-price">17 190₽</span>
+                    </div>
+                    <div class="buttons">
+                      <a class="btn-basket">В корзину</a>
+                      <button class="btn-order">Заказать сейчас</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="product-image">
+                    <img src="../images/card_image" alt="" />
+                  </div>
+                  <div class="product-info">
+                    <div class="category">✱ Зимние шины</div>
+                    <div class="product-name">
+                      Ikon (Nokian Tyres) Autograph Ice 9 SUV
+                    </div>
+                    <div class="prices">
+                      <span class="current-price">17 190₽</span>
+                    </div>
+                    <div class="buttons">
+                      <a class="btn-basket">В корзину</a>
+                      <button class="btn-order">Заказать сейчас</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="product-image">
+                    <img src="../images/card_image" alt="" />
+                  </div>
+                  <div class="product-info">
+                    <div class="category">✱ Зимние шины</div>
+                    <div class="product-name">
+                      Ikon (Nokian Tyres) Autograph Ice 9 SUV
+                    </div>
+                    <div class="prices">
+                      <span class="current-price">17 190₽</span>
+                    </div>
+                    <div class="buttons">
+                      <a class="btn-basket">В корзину</a>
+                      <button class="btn-order">Заказать сейчас</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="product-image">
+                    <img src="../images/card_image" alt="" />
+                  </div>
+                  <div class="product-info">
+                    <div class="category">✱ Зимние шины</div>
+                    <div class="product-name">
+                      Ikon (Nokian Tyres) Autograph Ice 9 SUV
+                    </div>
+                    <div class="prices">
+                      <span class="current-price">17 190₽</span>
+                    </div>
+                    <div class="buttons">
+                      <a class="btn-basket">В корзину</a>
+                      <button class="btn-order">Заказать сейчас</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="product-image">
+                    <img src="../images/card_image" alt="" />
+                  </div>
+                  <div class="product-info">
+                    <div class="category">✱ Зимние шины</div>
+                    <div class="product-name">
+                      Ikon (Nokian Tyres) Autograph Ice 9 SUV
+                    </div>
+                    <div class="prices">
+                      <span class="current-price">17 190₽</span>
+                    </div>
+                    <div class="buttons">
+                      <a class="btn-basket">В корзину</a>
+                      <button class="btn-order">Заказать сейчас</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="buttons">
-                <a class="btn-basket">В корзину</a>
-                <button class="btn-order">Заказать сейчас</button>
+            <!-- диски -->
+            <div class="tab-content" id="discs">
+              <div class="card_conteiner">
+                <div class="card">
+                  <div class="product-image">
+                    <img src="../images/card_image" alt="" />
+                  </div>
+                  <div class="product-info">
+                    <div class="category">✱ Зимние шины</div>
+                    <div class="product-name">
+                      Ikon (Nokian Tyres) Autograph Ice 9 SUV
+                    </div>
+                    <div class="prices">
+                      <span class="current-price">17 190₽</span>
+                    </div>
+                    <div class="buttons">
+                      <a class="btn-basket">В корзину</a>
+                      <button class="btn-order">Заказать сейчас</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="product-image">
+                    <img src="../images/card_image" alt="" />
+                  </div>
+                  <div class="product-info">
+                    <div class="category">✱ Зимние шины</div>
+                    <div class="product-name">
+                      Ikon (Nokian Tyres) Autograph Ice 9 SUV
+                    </div>
+                    <div class="prices">
+                      <span class="current-price">17 190₽</span>
+                    </div>
+                    <div class="buttons">
+                      <a class="btn-basket">В корзину</a>
+                      <button class="btn-order">Заказать сейчас</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="product-image">
+                    <img src="../images/card_image" alt="" />
+                  </div>
+                  <div class="product-info">
+                    <div class="category">✱ Зимние шины</div>
+                    <div class="product-name">
+                      Ikon (Nokian Tyres) Autograph Ice 9 SUV
+                    </div>
+                    <div class="prices">
+                      <span class="current-price">17 190₽</span>
+                    </div>
+                    <div class="buttons">
+                      <a class="btn-basket">В корзину</a>
+                      <button class="btn-order">Заказать сейчас</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="product-image">
+                    <img src="../images/card_image" alt="" />
+                  </div>
+                  <div class="product-info">
+                    <div class="category">✱ Зимние шины</div>
+                    <div class="product-name">
+                      Ikon (Nokian Tyres) Autograph Ice 9 SUV
+                    </div>
+                    <div class="prices">
+                      <span class="current-price">17 190₽</span>
+                    </div>
+                    <div class="buttons">
+                      <a class="btn-basket">В корзину</a>
+                      <button class="btn-order">Заказать сейчас</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-          <div class="card">
-        <div class="product-image">
-          <img src="../images/card_image" alt="">
-        </div>
-        <div class="product-info">
-            <div class="category">Зимние шины</div>
-            <div class="product-name">Ikon (Nokian Tyres) Autograph Ice 9 SUV</div>
-            <div class="prices">
-                <span class="current-price">17 190₽</span>
-            </div>
-            <div class="buttons">
-                <a class="btn-basket">В корзину</a>
-                <button class="btn-order">Заказать сейчас</button>
-            </div>
-        </div>
-    </div>
-          <div class="card">
-        <div class="product-image">
-          <img src="../images/card_image" alt="">
-        </div>
-        <div class="product-info">
-            <div class="category">Зимние шины</div>
-            <div class="product-name">Ikon (Nokian Tyres) Autograph Ice 9 SUV</div>
-            <div class="prices">
-                <span class="current-price">17 190₽</span>
-            </div>
-            <div class="buttons">
-                <a class="btn-basket">В корзину</a>
-                <button class="btn-order">Заказать сейчас</button>
-            </div>
-        </div>
-    </div>
-          <div class="card">
-        <div class="product-image">
-          <img src="../images/card_image" alt="">
-        </div>
-        <div class="product-info">
-            <div class="category">Зимние шины</div>
-            <div class="product-name">Ikon (Nokian Tyres) Autograph Ice 9 SUV</div>
-            <div class="prices">
-                <span class="current-price">17 190₽</span>
-            </div>
-            <div class="buttons">
-                <a class="btn-basket">В корзину</a>
-                <button class="btn-order">Заказать сейчас</button>
-            </div>
-        </div>
-    </div>
-          <div class="card">
-        <div class="product-image">
-          <img src="../images/card_image" alt="">
-        </div>
-        <div class="product-info">
-            <div class="category">Зимние шины</div>
-            <div class="product-name">Ikon (Nokian Tyres) Autograph Ice 9 SUV</div>
-            <div class="prices">
-                <span class="current-price">17 190₽</span>
-            </div>
-            <div class="buttons">
-                <a class="btn-basket">В корзину</a>
-                <button class="btn-order">Заказать сейчас</button>
-            </div>
-        </div>
-    </div>
-          <div class="card">
-        <div class="product-image">
-          <img src="../images/card_image" alt="">
-        </div>
-        <div class="product-info">
-            <div class="category">Зимние шины</div>
-            <div class="product-name">Ikon (Nokian Tyres) Autograph Ice 9 SUV</div>
-            <div class="prices">
-                <span class="current-price">17 190₽</span>
-            </div>
-            <div class="buttons">
-                <a class="btn-basket">В корзину</a>
-                <button class="btn-order">Заказать сейчас</button>
-            </div>
-        </div>
-    </div>
-         
-</div>
-</section>
+      </section>
       <section class="services">
         <div class="services-header">
           <h1>Мы быстро и качественно выполним следующие виды работ</h1>
@@ -196,7 +532,7 @@
                   <div class="service-icon">
                     <img
                       src="../images/service-icon-image1.png"
-                      alt="service-icon"
+                      alt="Шиномонтаж"
                     />
                     <h2>Шиномонтаж и балансировка</h2>
                   </div>
@@ -208,17 +544,18 @@
                     Ошиповка колёс <span class="price">5 руб. / 1 шип</span>
                   </li>
                   <li>
-                    Повторная ошиповка зимних <br />шин (теком)
+                    Повторная ошиповка зимних шин (теком)
                     <span class="price">15 руб. / 1 шип</span>
                   </li>
                 </ul>
               </div>
+
               <div class="service-card">
                 <div class="card-header">
                   <div class="service-icon">
                     <img
                       src="../images/service-icon-image2.png"
-                      alt="service-icon"
+                      alt="Ремонт дисков"
                     />
                     <h2>Ремонт дисков и шин</h2>
                   </div>
@@ -232,21 +569,20 @@
                 </ul>
               </div>
             </div>
+
             <div class="services-row">
               <div class="service-card">
                 <div class="card-header">
                   <div class="service-icon">
                     <img
                       src="../images/service-icon-image3.png"
-                      alt="service-icon"
+                      alt="СТО услуги"
                     />
                     <h2>СТО и дополнительные услуги</h2>
                   </div>
                 </div>
                 <ul class="service-list">
-                  <li>
-                    Продажа шин и дисков (в ассортименте и <br />под заказ)
-                  </li>
+                  <li>Продажа шин и дисков (в ассортименте и под заказ)</li>
                   <li>Замена масла, диагностика ходовой части авто</li>
                   <li>Мелкий ремонт автомобилей</li>
                   <li>Подбор шин/дисков</li>
@@ -277,6 +613,7 @@
                 </p>
             </div>
 
+<<<<<<< HEAD
             <div class="Acceptance-of-applications">
                 <h1>
                     Прием заявок на товар ведется <br />
@@ -285,10 +622,25 @@
                 <p class="Waiting-period" style="margin-bottom: 50px;">*Срок ожидания заказа: от 1 до 5 дней</p>
                 <a class="number" href="tel:79372043814">+7(937)204-38-14</a>
             </div>
+=======
+          <div class="Acceptance-of-applications">
+            <h1>
+              Прием заявок на товар ведеться <br />
+              ежедневно
+            </h1>
+            <p class="Waiting-period" style="margin-bottom: 50px">
+              *Срок ожидания заказа: от 1 до 5 дня
+            </p>
+            <a class="number" href="tel:79372043814">+7(937)204-38-14</a>
+          </div>
+>>>>>>> 41ef497db0091c3d21eb63b072b7943dbf8f24db
         </div>
     </section>
       <section class="club-discounts">
-        <div style="display: flex; justify-content: center" class="club-discounts-content">
+        <div
+          style="display: flex; justify-content: center"
+          class="club-discounts-content"
+        >
           <div class="club-discounts-text">
             <h1>Клубные скидки</h1>
             <p>
@@ -402,67 +754,69 @@
         </div>
       </section>
 
-        <div class="gallery-container">
-          <h1>Галерея</h1>
-            <div class="gallery-track">
-                <div class="gallery-item">
-                    <img src="../images/Rectangle 63.png" alt="image-slider">
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="../images/Rectangle 64.png" alt="image-slider">
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="../images/Rectangle 65.png" alt="image-slider">
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="../images/ah.jpg" alt="image-slider">
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="../images/ha.jpg" alt="image-slider">
-                </div>
-                <div class="gallery-item">
-                    <img src="../images/20200208_113616.jpg" alt="image-slider">
-                </div>
-                <div class="gallery-item">
-                    <img src="../images/20200208_113624.jpg" alt="image-slider">
-                </div>
-                <div class="gallery-item">
-                    <img src="../images/20200208_113634.jpg" alt="image-slider">
-                </div>
-                <div class="gallery-item">
-                    <img src="../images/20200208_113649.jpg" alt="image-slider">
-                </div>
-                <div class="gallery-item">
-                    <img src="../images/20200209_075900.jpg" alt="image-slider">
-                </div>
-                <div class="gallery-item">
-                    <img src="../images/aB1dCPkYsy4.jpg" alt="image-slider">
-                </div>
-            </div>
-            
-            <div class="gallery-controls">
-                <button class="nav-btn prev-btn" style="color: black; background-color:white;">
-                <a><</a>
-                </button>
-                
+      <div class="gallery-container">
+        <h1>Галерея</h1>
+        <div class="gallery-track">
+          <div class="gallery-item">
+            <img src="../images/Rectangle 63.png" alt="image-slider" />
+          </div>
 
-                
-                <button class="nav-btn next-btn" style="color: black; background-color:white;">
-                <a>></a>
-                </button>
-                
-                <div class="gallery-counter" style="display: none;">
-                    <span class="current">1</span> / <span class="total">5</span>
-                </div>
-            </div>
+          <div class="gallery-item">
+            <img src="../images/Rectangle 64.png" alt="image-slider" />
+          </div>
+
+          <div class="gallery-item">
+            <img src="../images/Rectangle 65.png" alt="image-slider" />
+          </div>
+
+          <div class="gallery-item">
+            <img src="../images/ah.jpg" alt="image-slider" />
+          </div>
+
+          <div class="gallery-item">
+            <img src="../images/ha.jpg" alt="image-slider" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/20200208_113616.jpg" alt="image-slider" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/20200208_113624.jpg" alt="image-slider" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/20200208_113634.jpg" alt="image-slider" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/20200208_113649.jpg" alt="image-slider" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/20200209_075900.jpg" alt="image-slider" />
+          </div>
+          <div class="gallery-item">
+            <img src="../images/aB1dCPkYsy4.jpg" alt="image-slider" />
+          </div>
         </div>
-    </div>
-        <script src="../js/main.js"></script>
-    </main>
+
+        <div class="gallery-controls">
+          <button
+            class="nav-btn prev-btn"
+            style="color: black; background-color: white"
+          >
+            <a><</a>
+          </button>
+
+          <button
+            class="nav-btn next-btn"
+            style="color: black; background-color: white"
+          >
+            <a>></a>
+          </button>
+
+          <div class="gallery-counter" style="display: none">
+            <span class="current">1</span> / <span class="total">5</span>
+          </div>
+        </div>
+      </div>
+      <script src="../js/main.js"></script>
     </main>
   </body>
 </html>
