@@ -333,37 +333,7 @@ html {
     max-width: 450px;
   }
 }
-.acceptance-of-applications {
-  background-image: url(../images/background\ for\ accepting\ applications.png);
-  background-position: center center;
-  background-size: 100%;
-  height: auto;
-  background-repeat: no-repeat;
-  flex-direction: column;
-}
 
-.main-acceptance-of-applications {
-  color: white;
-  padding: clamp(30px, 5vw, 70px);
-}
-
-.Acceptance-of-applications {
-  margin-top: clamp(60px, 15vw, 160px);
-}
-
-.Acceptance-of-applications p {
-  font-size: clamp(14px, 0.4vw, 10px);
-}
-
-.Tire-disc-selection h1 {
-  font-size: clamp(26px, 4.5vw, 45px);
-  line-height: 1.2;
-}
-
-.Tire-disc-selection p {
-  font-size: clamp(18px, 3vw, 32px);
-  line-height: 1.4;
-}
 
 .Waiting-period {
   font-size: clamp(16px, 2vw, 24px);
@@ -1043,7 +1013,148 @@ html {
 .hexagon_text_column:hover {
   transform: translateY(-10px);
 }
+h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            color: #fff;
+        }
 
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100px;
+            height: 4px;
+            background-color: #fff;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 15px;
+        }
+
+        /* Секция "Подбор шин/дисков" */
+        .acceptance-of-applications {
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(50, 50, 50, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(30, 30, 30, 0.3) 0%, transparent 50%),
+                linear-gradient(to bottom, #0a0a0a, #1a1a1a);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-acceptance-of-applications {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .Tire-disc-selection, .Acceptance-of-applications {
+            flex: 1;
+            min-width: 300px;
+            padding: 30px;
+            background-color: rgba(20, 20, 20, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid #333;
+            position: relative;
+            z-index: 2;
+        }
+
+
+
+        .Waiting-period {
+            color: #aaa;
+            font-size: 0.9rem;
+            font-style: italic;
+            border-left: 3px solid #777;
+            padding-left: 10px;
+        }
+
+        .number {
+            display: inline-block;
+            background-color: none;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border: 2px solid #fff;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .number:hover {
+            background-color: #fff;
+            color: #000;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+        }
+      
+        .tire-icon {
+            position: absolute;
+            font-size: 60px;
+            opacity: 0.05;
+            z-index: 1;
+        }
+
+        .tire-icon-1 {
+            top: 20%;
+            left: 5%;
+            transform: rotate(45deg);
+        }
+
+        .tire-icon-2 {
+            bottom: 30%;
+            right: 10%;
+            transform: rotate(-20deg);
+        }
+
+        .tire-icon-3 {
+            top: 15%;
+            right: 15%;
+        }
+
+       
+        @media (max-width: 768px) {
+            .main-acceptance-of-applications,
+            .club-discounts-content {
+                flex-direction: column;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 50px 20px;
+            }
+            
+            .Tire-disc-selection, .Acceptance-of-applications,
+            .club-discounts-text {
+                padding: 20px;
+            }
+        }
+
+       
+        @keyframes rotateTire {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .tire-icon-3 {
+            animation: rotateTire 60s linear infinite;
+        }
 .hexagon_text_column:hover .main-text {
   opacity: 0;
   transform: translateY(10px);
