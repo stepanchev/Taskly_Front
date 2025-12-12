@@ -1,11 +1,4 @@
-// Главный JavaScript файл
-console.log("Taskly JS загружен");
-
-// Простой пример функциональности
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("DOM готов");
-
-  // Можно добавить любую клиентскую логику
   const currentYear = new Date().getFullYear();
   const yearElements = document.querySelectorAll(".current-year");
 
@@ -22,49 +15,39 @@ document.addEventListener("DOMContentLoaded", function () {
   const totalCounter = document.querySelector(".gallery-counter .total");
 
   let currentIndex = 0;
-  const itemsPerView = 5; // Сколько элементов видно одновременно
+  const itemsPerView = 5;
   const totalItems = galleryItems.length;
-  const maxIndex = totalItems - itemsPerView; // Максимальный индекс для смещения
+  const maxIndex = totalItems - itemsPerView;
 
   totalCounter.textContent = totalItems - itemsPerView + 1;
 
-  // Функция обновления позиции галереи
   function updateGalleryPosition() {
-    // Рассчитываем смещение
-    const itemWidth = galleryItems[0].offsetWidth + 20; // width + gap
+    const itemWidth = galleryItems[0].offsetWidth + 20;
     const translateValue = currentIndex * itemWidth;
 
     galleryTrack.style.transform = `translateX(-${translateValue}px)`;
 
-    // Обновляем счетчик
     currentCounter.textContent = currentIndex + 1;
   }
 
-  // Следующий элемент
   nextBtn.addEventListener("click", function () {
     if (currentIndex < maxIndex) {
-      // Переход к следующему элементу
       currentIndex++;
     } else {
-      // Возврат к началу
       currentIndex = 0;
     }
     updateGalleryPosition();
   });
 
-  // Предыдущий элемент
   prevBtn.addEventListener("click", function () {
     if (currentIndex > 0) {
-      // Переход к предыдущему элементу
       currentIndex--;
     } else {
-      // Переход к последней позиции
       currentIndex = maxIndex;
     }
     updateGalleryPosition();
   });
 
-  // Обработка свайпов на мобильных устройствах
   let startX = 0;
   let endX = 0;
 
@@ -81,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const swipeThreshold = 50;
 
     if (startX - endX > swipeThreshold) {
-      // Свайп влево - следующий
       if (currentIndex < maxIndex) {
         currentIndex++;
       } else {
@@ -89,7 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       updateGalleryPosition();
     } else if (endX - startX > swipeThreshold) {
-      // Свайп вправо - предыдущий
       if (currentIndex > 0) {
         currentIndex--;
       } else {
@@ -99,7 +80,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Автоматическая прокрутка
   let autoSlideInterval;
   function startAutoSlide() {
     autoSlideInterval = setInterval(() => {
@@ -107,7 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 5000);
   }
 
-  // Останавливаем автопрокрутку при наведении
   const galleryContainer = document.querySelector(".gallery-container");
   galleryContainer.addEventListener("mouseenter", () => {
     clearInterval(autoSlideInterval);
@@ -117,7 +96,6 @@ document.addEventListener("DOMContentLoaded", function () {
     startAutoSlide();
   });
 
-  // Адаптация при изменении размера окна
   let resizeTimeout;
   window.addEventListener("resize", function () {
     clearTimeout(resizeTimeout);
@@ -140,32 +118,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let currentBannerSlide = 0;
   let bannerInterval;
-  const bannerDelay = 5000; // 5 секунд между автоматической сменой слайдов
+  const bannerDelay = 5000;
 
-  // Инициализация баннера
   function initBanner() {
-    // Сначала очищаем контейнер с точками
     bannerDots.innerHTML = "";
 
-    // Создаем точки-индикаторы - РОВНО СТОЛЬКО, СКОЛЬКО СЛАЙДОВ
     createDots();
-
-    // Показываем первый слайд
     goToBannerSlide(0);
-
-    // Запускаем автопрокрутку
     startAutoPlay();
-
-    // Добавляем обработчики событий
     addEventListeners();
-
-    // Выводим информацию для отладки
-    console.log(`Всего слайдов: ${bannerSlides.length}`);
   }
 
-  // Создание точек-индикаторов (горизонтальных)
   function createDots() {
-    // Создаем точки только для каждого слайда
     for (let i = 0; i < bannerSlides.length; i++) {
       const dot = document.createElement("div");
       dot.classList.add("banner-dot");
@@ -176,14 +140,9 @@ document.addEventListener("DOMContentLoaded", function () {
       dot.addEventListener("click", () => goToBannerSlide(i));
       bannerDots.appendChild(dot);
     }
-
-    // Выводим информацию для отладки
-    console.log(`Создано точек: ${bannerSlides.length}`);
   }
 
-  // Переход к конкретному слайду
   function goToBannerSlide(slideIndex) {
-    // Зацикливаем баннер
     if (slideIndex < 0) {
       currentBannerSlide = bannerSlides.length - 1;
     } else if (slideIndex >= bannerSlides.length) {
@@ -192,17 +151,13 @@ document.addEventListener("DOMContentLoaded", function () {
       currentBannerSlide = slideIndex;
     }
 
-    // Перемещаем баннер
     banner.style.transform = `translateX(-${currentBannerSlide * 100}%)`;
 
-    // Обновляем активную точку
     updateDots();
 
-    // Сбрасываем автопрокрутку
     resetAutoPlay();
   }
 
-  // Обновление активной точки
   function updateDots() {
     const dots = document.querySelectorAll(".banner-dot");
     dots.forEach((dot, index) => {
@@ -214,17 +169,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Следующий слайд
   function nextBannerSlide() {
     goToBannerSlide(currentBannerSlide + 1);
   }
 
-  // Предыдущий слайд
   function prevBannerSlide() {
     goToBannerSlide(currentBannerSlide - 1);
   }
 
-  // Автопрокрутка
   function startAutoPlay() {
     bannerInterval = setInterval(nextBannerSlide, bannerDelay);
   }
@@ -238,23 +190,15 @@ document.addEventListener("DOMContentLoaded", function () {
     startAutoPlay();
   }
 
-  // Добавление обработчиков событий
   function addEventListeners() {
     // Кнопки навигации
     prevBtn.addEventListener("click", prevBannerSlide);
     nextBtn.addEventListener("click", nextBannerSlide);
 
-    // Клавиши клавиатуры
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "ArrowLeft") prevBannerSlide();
-      if (e.key === "ArrowRight") nextBannerSlide();
-    });
-
-    // Пауза при наведении на баннер
+    // Пауза
     banner.parentElement.addEventListener("mouseenter", stopAutoPlay);
     banner.parentElement.addEventListener("mouseleave", startAutoPlay);
 
-    // Касание для мобильных устройств
     let touchStartX = 0;
     let touchEndX = 0;
 
@@ -321,4 +265,79 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   const savedTab = localStorage.getItem("selectedTab") || "recommended";
   switchTab(savedTab);
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const addToCartButtons = document.querySelectorAll(".add-to-cart");
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  function addToCartSimple(button) {
+    const card = button.closest(".card");
+
+    if (!card) return;
+
+    const productImage = card.querySelector(".product-image img")?.src || "";
+    const productName =
+      card.querySelector(".product-name")?.textContent.trim() || "Товар";
+    const productPrice = card
+      .querySelector(".current-price")
+      ?.textContent.replace("₽", "")
+      .replace(/\s/g, "")
+      .trim();
+
+    if (!productPrice || isNaN(parseInt(productPrice))) {
+      console.warn("Не удалось получить цену товара");
+      return;
+    }
+
+    const productId = `${productImage}-${productPrice}`;
+
+    const existingItem = cart.find((item) => item.id === productId);
+
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+      cart.push({
+        id: productId,
+        name: productName,
+        price: parseInt(productPrice),
+        image: productImage,
+        quantity: 1,
+      });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    updateCartDisplay();
+
+    showNotification(`✅ ${productName} добавлен в корзину!`);
+
+    console.log(`Добавлен в корзину: ${productName}, цена: ${productPrice}₽`);
+  }
+
+  function updateCartDisplay() {
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const cartCounter = document.querySelector(".cart-counter");
+    if (cartCounter) {
+      cartCounter.textContent = totalItems;
+    }
+  }
+
+  function showNotification(message) {
+    const notification = document.createElement("div");
+    notification.className = "notification";
+    notification.textContent = message;
+    document.body.appendChild(notification);
+
+    setTimeout(() => {
+      notification.remove();
+    }, 2000);
+  }
+  addToCartButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      addToCartSimple(this);
+    });
+  });
+
+  updateCartDisplay();
 });
