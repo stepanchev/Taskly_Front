@@ -20,6 +20,40 @@ html {
   display: none;
 }
 
+/* Добавьте эти стили в ваш существующий CSS */
+#categories-dropdown {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeInDown 0.3s ease-out;
+}
+
+#categories-dropdown a {
+  transition: all 0.3s ease;
+}
+
+#categories-dropdown a:hover {
+  background-color: #f8fafc;
+  padding-left: 20px;
+}
+
+#categories-icon.rotate-180 {
+  transform: rotate(180deg);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Убедитесь, что контейнер с поиском имеет relative позиционирование */
+.flex.items-center.border-2.border-gray-300.rounded-lg {
+  position: relative;
+}
 /* Карты */
 .caard-title h1 {
   font-size: 1.6vw;
@@ -1365,7 +1399,7 @@ html {
 }
 @media (width <=800px) {
   .gallery-item img {
-    width: 160px;
+    width: 100%;
     height: 100%;
   }
   .acceptance-of-applications {
