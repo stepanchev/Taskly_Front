@@ -907,13 +907,22 @@ html {
 .club-discounts-text h1 {
   font-size: 2vw;
   font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 .club-discounts-text p {
   font-size: 1.5vw;
-  color: #505050;
-  line-height: 1.5;
-  font-weight: 200;
+  color: #3d3d3d;
+  line-height: 1.6;
+  font-weight: 400;
+  padding: 20px;
+  border-top: 2px solid #999999;
+  border-left: 2px solid #999999;
+  border-right: 2px solid #999999;
+  border-bottom: 2px solid #999999;
+  border-radius: 20px;
+
 }
 
 .club-discounts {
@@ -1445,7 +1454,9 @@ html {
     width: 390px;
     top: 71%;
   }
-
+.club-discounts-text h1{
+margin-bottom: 70px;
+}
   .banner-text p {
     font-size: 3.9vw;
   }
@@ -1497,8 +1508,8 @@ html {
     width: 110%;
   }
   .img-club {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
   }
   .bunner-button {
     position: relative;
@@ -1640,6 +1651,9 @@ html {
     margin-top: 0;
     padding: 0;
   }
+  .club-discounts-text h1{
+margin-bottom: 20px;
+  }
   .club-discounts h1 {
     font-size: 6vw;
     text-align: center;
@@ -1654,7 +1668,7 @@ html {
     text-align: center;
   }
   .club-discounts-text {
-    width: 110%;
+    width: 90%;
   }
   .img-club {
     width: 200px;
