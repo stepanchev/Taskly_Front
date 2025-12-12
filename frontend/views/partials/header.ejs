@@ -199,26 +199,59 @@
           class="flex items-center border-2 border-gray-300 rounded-lg hover:border-gray-400 transition-all w-full md:w-auto"
           style="width: 40vw"
         >
-          <button
-            type="button"
-            class="px-4 py-3 text-gray-400 hover:bg-gray-100 transition-colors flex items-center gap-2 border-r border-gray-300"
-          >
-            <span class="font-medium hidden lg:inline">Категории</span>
-            <span class="font-medium lg:hidden">Категории</span>
-            <svg
-              class="w-4 h-4 text-gray-500"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </button>
+         <!-- Найдите этот блок в вашем коде -->
+<button
+  type="button"
+  class="px-4 py-3 text-gray-400 hover:bg-gray-100 transition-colors flex items-center gap-2 border-r border-gray-300"
+  id="categories-btn"
+>
+  <span class="font-medium hidden lg:inline">Категории</span>
+  <span class="font-medium lg:hidden">Категории</span>
+  <svg
+    class="w-4 h-4 text-gray-500 transition-transform duration-200"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+    id="categories-icon"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M19 9l-7 7-7-7"
+    />
+  </svg>
+</button>
+
+<!-- Добавьте этот div ПРЯМО ПОСЛЕ кнопки категорий -->
+<div id="categories-dropdown" class="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-xl border border-gray-200 z-50 hidden">
+  <div class="py-2">
+    <a href="#" class="flex items-center px-4 py-3 hover:bg-gray-50 text-gray-700">
+      <svg class="w-5 h-5 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+      </svg>
+      Все товары
+    </a>
+    <a href="#" class="flex items-center px-4 py-3 hover:bg-gray-50 text-gray-700 border-t border-gray-100">
+      <svg class="w-5 h-5 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+      </svg>
+      Шины
+    </a>
+    <a href="#" class="flex items-center px-4 py-3 hover:bg-gray-50 text-gray-700 border-t border-gray-100">
+      <svg class="w-5 h-5 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" stroke-width="2"/>
+      </svg>
+      Диски
+    </a>
+    <a href="#" class="flex items-center px-4 py-3 hover:bg-gray-50 text-gray-700 border-t border-gray-100">
+      <svg class="w-5 h-5 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+      Зимние шины
+    </a>
+  </div>
+</div>
 
           <div class="flex-1 flex items-center md:w-64 lg:w-80 xl:w-96">
             <input
@@ -246,6 +279,45 @@
 </header>
 
 <script>
+  // Добавьте этот код в ваш существующий скрипт, после кода для корзины
+
+// Управление выпадающим списком категорий
+const categoriesBtn = document.getElementById('categories-btn');
+const categoriesDropdown = document.getElementById('categories-dropdown');
+const categoriesIcon = document.getElementById('categories-icon');
+
+if (categoriesBtn && categoriesDropdown) {
+  // Открытие/закрытие по клику на кнопку
+  categoriesBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    categoriesDropdown.classList.toggle('hidden');
+    categoriesIcon.classList.toggle('rotate-180');
+  });
+
+  // Закрытие по клику вне области
+  document.addEventListener('click', (e) => {
+    if (!categoriesBtn.contains(e.target) && !categoriesDropdown.contains(e.target)) {
+      categoriesDropdown.classList.add('hidden');
+      categoriesIcon.classList.remove('rotate-180');
+    }
+  });
+
+  // Закрытие по ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !categoriesDropdown.classList.contains('hidden')) {
+      categoriesDropdown.classList.add('hidden');
+      categoriesIcon.classList.remove('rotate-180');
+    }
+  });
+
+  // Закрытие при клике на ссылку в dropdown
+  categoriesDropdown.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      categoriesDropdown.classList.add('hidden');
+      categoriesIcon.classList.remove('rotate-180');
+    });
+  });
+}
   // Бургер-меню
   const burgerMenu = document.getElementById("burger-menu");
   const mobileMenu = document.getElementById("mobile-menu");
