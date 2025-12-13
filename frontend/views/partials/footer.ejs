@@ -1,26 +1,283 @@
-<footer class="bg-gray-800 text-white mt-12">
-  <div class="container mx-auto px-4 py-8">
-    <div class="flex flex-col md:flex-row justify-between items-center">
-      <div class="mb-4 md:mb-0">
-        <p class="text-lg font-semibold">Мой проект</p>
-        <p class="text-gray-400">Express.js + Tailwind CSS</p>
-      </div>
 
-      <div class="flex space-x-4">
-        <a href="#" class="text-gray-400 hover:text-white">
-          <i class="fab fa-github text-xl"></i>
-        </a>
-        <a href="#" class="text-gray-400 hover:text-white">
-          <i class="fab fa-telegram text-xl"></i>
-        </a>
-        <a href="#" class="text-gray-400 hover:text-white">
-          <i class="fab fa-twitter text-xl"></i>
-        </a>
-      </div>
-    </div>
+    <footer class="footer-container">
+        <div class="footer-content-wrapper">
+            
+ 
+            <div class=" footer-info">
+                <div class="footer-logo" style="margin-bottom: 10px;">
+    <img
+          src="https://avtoobuv73.ru/img/logo.png"
+          alt="logo"
+          class="w-full h-auto"
+        />
 
-    <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400">
-      <p>&copy; 2024 Мой проект. Все права защищены.</p>
-    </div>
-  </div>
-</footer>
+                   
+                </div>
+                
+                <div class="address-block">
+                    <h3 class="address-title">Магазин и шиномонтаж</h3>
+                    <p class="address-text">пр-т Созидателей, 35</p>
+                    <p class="address-text">(Заволжский авторынок)</p>
+                    <p class="address-text">с 8:00 до 19:00</p>
+                    <p class="address-text">Шиномонтаж, правка стальных и литых дисков</p>
+                </div>
+            </div>
+
+          
+            <div class="footer footer-menu">
+                <h3 class="menu-title">Меню</h3>
+                <ul class="menu-list">
+                    <li><a href="#" class="menu-link">Главная</a></li>
+                    <li><a href="#" class="menu-link">Шиномонтаж</a></li>
+                    <li><a href="#" class="menu-link">Отзывы</a></li>
+                    <li><a href="#" class="menu-link">Контакты</a></li>
+                    <li><a href="#" class="menu-link">Политика конфиденциальности</a></li>
+                </ul>
+            </div>
+
+           
+            <div class="footer-callback">
+                <h3 class="callback-title">Заказать звонок</h3>
+                
+            
+                <div class="callback-form-area">
+                    <input type="text" class="form-input" placeholder="">
+                    <div class="form-submit-button"><button style="cursor: pointer;"></button></div>
+                </div>
+                <p class="consent-text">Я даю согласие на обработку моих персональных данных в соответствии с <a href="#" class="consent-link">условиями</a>.</p>
+                
+                <div class="phone-numbers">
+                    <p class="phone-number">+7 (927) 270-18-54</p>
+                    <p class="phone-number">+7 (937) 204-38-14 - общий</p>
+                    <p class="phone-number">+7 (9510) 94-74-64</p>
+                </div>
+                
+               
+                <div class="social-links">
+                    <a href="#" class="social-icon "></a>
+                    <a href="#" class="social-icon"></a>
+                    <a href="#" class="social-icon "></a>
+                </div>
+            </div>
+
+          
+            <div class=" footer-map">
+                <div class="map-wrapper">
+                  
+                    <div class="map-placeholder">
+                       <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1e69c635204cf7bafc0dcbe12fa3c011c79c50d3e49c8a485846af659c002636&amp;source=constructor" width="320" height="251" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+ 
+        <div class="footer-divider"></div>
+    </footer>
+
+
+
+  <style>
+
+.footer-container {
+    padding: 60px 80px 40px 80px; 
+    width: 100%;
+  
+    margin: 0 auto;
+    background-color: #101010;
+
+}
+
+.footer-content-wrapper {
+    display: flex;
+    justify-content: space-between; 
+    gap: 40px;
+    padding: 0 20px; 
+    
+}
+
+.footer {
+    flex: 1; 
+    min-width: 0; 
+}
+
+
+.footer-info {
+    flex: 1.2; 
+    max-width: 300px;
+}
+
+.logo-main {
+    font-size: 48px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 5px 0;
+    line-height: 1;
+}
+
+.logo-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.address-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.address-text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 5px 0;
+    color: #ffffff;
+}
+
+
+.menu-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list li {
+    margin-bottom: 10px;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.menu-link:hover {
+    color: #fff;
+}
+
+
+.callback-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+
+.callback-form-area {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.form-input {
+    background-color: #ffffff; 
+    border: none;
+    padding: 12px 15px;
+    flex-grow: 1;
+    border-radius: 4px 0 0 4px;
+    color: #000000;
+    outline: none;
+    height: 40px;
+    box-sizing: border-box;
+}
+
+.form-submit-button {
+    width: 40px; 
+    background-color: #555; 
+    height: 40px;
+    border-radius: 0 4px 4px 0;
+}
+
+.consent-text {
+    font-size: 10px;
+    color: #888;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.consent-link {
+    color: #b6addd;
+    text-decoration: underline;
+}
+
+.phone-number {
+    font-size: 16px;
+    color: #fff;
+    margin: 10px 0;
+}
+
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.social-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ccc; 
+    opacity: 0.7; 
+}
+
+.footer-map {
+    flex: 1.5; 
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.footer-divider {
+    width: 80%;
+    max-width: 1200px;
+    height: 1px;
+    background-color: #3a3a3a; 
+    margin: 40px auto 0 auto; 
+}
+
+
+@media (max-width: 1100px) {
+    .footer-content-wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footer-col {
+        flex: 0 0 45%; 
+        margin-bottom: 30px;
+    }
+    .footer-info {
+        flex: 0 0 90%;
+        max-width: none;
+    }
+    .footer-map {
+        justify-content: center; 
+        flex: 0 0 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-col {
+        flex: 0 0 90%; 
+    }
+    .logo-main {
+        font-size: 36px;
+    }
+}
+  </style>
+
+
